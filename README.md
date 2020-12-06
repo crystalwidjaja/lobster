@@ -15,3 +15,16 @@
 # Completed
 # Repo link and README.md
 
+NAME          | Crystal Widjaja | Ridhima Inukurti | Maggie Killada |  Sriya Chilla  |
+------------- | --------------- | ---------------- | -------------- | -------------- |
+GITHUB ID     | crystalwidjaja  |                  |                |  sriyachilla   |
+Content Cell  | Content Cell    |                  |                |                |
+Content Cell  | Content Cell    |                  |                |                |
+Content Cell  | Content Cell    |                  |                |                |
+  
+Sriya Chilla  | Crystal Widjaja | Ridhima Inukurti | Maggie Killada
+------------- | --------------- | ---------------- | --------------
+Content Cell  | Content Cell    |                  |
+Content Cell  | Content Cell    |                  |
+Content Cell  | Content Cell    |                  |
+Content Cell  | Content Cell    |                  |
