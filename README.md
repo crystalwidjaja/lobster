@@ -1,4 +1,6 @@
-# lobster
+# Musuem Exhibit
+
+##Key Features
 
 # Museum - with exhibits and maybe gift shop
 # Photography
@@ -17,7 +19,7 @@
 # Authors & Github IDs
 NAME          | Crystal Widjaja | Ridhima Inukurti | Maggie Killada |  Sriya Chilla  |
 ------------- | --------------- | ---------------- | -------------- | -------------- |
-GITHUB ID     | crystalwidjaja  |                  |   maggie3000   |  sriyachilla   |
+GITHUB ID     | crystalwidjaja  | ridhimainukurti  |   maggie3000   |  sriyachilla   |
 Content Cell  | Content Cell    |                  |                |                |
 Content Cell  | Content Cell    |                  |                |                |
 Content Cell  | Content Cell    |                  |                |                |
