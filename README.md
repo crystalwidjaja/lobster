@@ -1,14 +1,9 @@
 # Musuem Exhibit 
-Our website is a museum exhibit that encompasses the aspects of art/culture/history. Within the website, depending on the user’s interests (figured out through a form), the user will be able to visit a variety of exhibits like photography, international culture, music and more. They also have access to a gift shop where they can buy items that interest them. 
+Summary: Our website is a museum exhibit that encompasses the aspects of art/culture/history. Within the website, depending on the user’s interests (figured out through a form), the user will be able to visit a variety of exhibits like photography, international culture, music and more. They also have access to a gift shop where they can buy items that interest them. 
 # Key Features 
-Exhibits
-  - Photography
-  - International Culture
-      - Japanese
-      - German
-  - Music → can be narrowed to decades/genres
-  - History (Japanese?)
-  - Botany
+ - Exhibits
+ 
+
 Carousel for photographs
 User makes an account to save data -- login (force them to create an account)
   - They can pick favorite subjects, genres of music (like NoRedInk)
