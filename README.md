@@ -61,7 +61,13 @@ Final/N@tM Goal:
 # Authors & Github IDs
 NAME          | Crystal Widjaja | Ridhima Inukurti | Maggie Killada |  Sriya Chilla  |
 ------------- | --------------- | ---------------- | -------------- | -------------- |
-GITHUB ID     | crystalwidjaja  | ridhimainukurti  |   maggie3000   |  sriyachilla   |
+Crystal Widjaja  | crystalwidjaja  | ridhimainukurti  |   maggie3000   |  sriyachilla   |
+------------- |
+------------- |
+------------- |
+------------- |
+------------- |
+
 # Links
 Project Plan: https://docs.google.com/document/d/1oF9n5UcXqyrZDL_TEkaHepAqPodVf1hqFacXWsT9auY/edit?usp=sharing 
 Storyboard: https://docs.google.com/presentation/d/1s8BYup586gtJS0jcmAaMi93Vr8C7_bnCXn_vSK02BRc/edit?usp=sharing 
