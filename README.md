@@ -59,14 +59,12 @@ Final/N@tM Goal:
   - Create carousel and gift shop
   - Add search bar
 # Authors & Github IDs
-NAME          | Crystal Widjaja | Ridhima Inukurti | Maggie Killada |  Sriya Chilla  |
-------------- | --------------- | ---------------- | -------------- | -------------- |
-Crystal Widjaja  | crystalwidjaja  | ridhimainukurti  |   maggie3000   |  sriyachilla   |
-------------- |
-------------- |
-------------- |
-------------- |
-------------- |
+NAME             | GITHUB ID |
+-------------    | --------------- |
+Crystal Widjaja  | crystalwidjaja  |
+Ridhima Inukurti | ridhimainukurti |
+Maggie Killada   | maggie3000 |
+Sriya Chilla     | sriyachilla |
 
 # Links
 Project Plan: https://docs.google.com/document/d/1oF9n5UcXqyrZDL_TEkaHepAqPodVf1hqFacXWsT9auY/edit?usp=sharing 
