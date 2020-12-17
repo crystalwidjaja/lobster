@@ -1,16 +1,54 @@
 # https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import Flask, render_template,redirect,url_for
-#create a Flask instance
 
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask import render_template, request, redirect, url_for
+import os
+
+''' database setup  '''
+project_dir = os.path.dirname(os.path.abspath(__file__))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "userprofiles.db"))
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = database_file
+db = SQLAlchemy(app)
+
+''' table definitions '''
+class User(db.Model):
+    userid = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), unique=True, nullable=False)
+    passwd = db.Column(db.String(255), unique=True, nullable=False)
+    firstname = db.Column(db.String(255), nullable=False)
+    lastname = db.Column(db.String(255), nullable=False)
+    email_address = db.Column(db.String(255), unique=True, nullable=True)
+    gender = db.Column(db.String(10), unique=False, nullable=True)
+    age = db.Column(db.Integer, unique=False, nullable=True)
+    dob = db.Column(db.Date, unique=False, nullable=True)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+''' table creation '''
+db.create_all()
 
 #connects default URL of server to render home.html
-@app.route('/')
-@app.route('/landing_page')
-def landing_page():
-    #function use Flask import (Jinja) to render an HTML template
-    return render_template("landing_page.html")
 
+@app.route('/landing_page', methods=["GET", "POST"])
+def landing_page():
+    users = None
+    if request.form:
+        try:
+            """prepare data for primary table extracting from form"""
+            user = User(userid=request.form.get("userid"), username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"),lastname=request.form.get("lastName"))
+            """add and commit data to user table"""
+            db.session.add(user)
+            db.session.commit()
+        except Exception as e:
+            print("failed to add user")
+            print(e)
+    users = User.query.all()
+    return render_template("landing_page.html", users=users)
+
+@app.route('/')
 @app.route('/home')
 def home_route():
     #function use Flask import (Jinja) to render an HTML template

@@ -9,7 +9,32 @@
     <p>The user will first see the the sign in page before they can see the home page.</p>
 
     <!-- Sign in Form -->
-    <form action="process.php" method="POST">
+    <form ID="myForm" action="/landing_page" method="POST">
+        <div>
+            <label>User Id</label>
+            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
+            <input type="text" name="userid" placeholder="User Id">
+        </div>
+        <div>
+            <label>Username</label>
+            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
+            <input type="text" name="username" placeholder="Enter Username">
+        </div>
+        <br>
+        <div>
+            <label>Password</label>
+            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
+            <input type="password" name="passwd" placeholder="Enter Password">
+        </div>
+        <br>
+        <!-- VERIFY PASSWORD (work on later)
+        <div>
+            <label>Confirm Password</label> -->
+            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
+            <!-- <input type="password" name="confirmPassword" placeholder="Confirm Password">
+        </div>
+        -->
+        <br>
         <div>
             <label>First Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
@@ -28,14 +53,8 @@
             <input type="email" name="email">
         </div>
         <br>
-        <!-- Textarea makes a larger box for short answer -->
         <div>
-            <label>Short Answer (ex: questions)</label>
-            <textarea name="questions"></textarea>
-        </div>
-        <br>
-        <div>
-            <label>Dropdown (ex: Gender)</label>
+            <label>Gender</label>
             <select name="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -44,21 +63,30 @@
         </div>
         <br>
         <div>
-            <label>Number (ex:Age)</label>
+            <label>Age</label>
             <!-- Added a predefined value to the input -->
             <input type="number" name="age" value="0">
         </div>
         <br>
         <div>
-            <label>Date (ex: Birthday)</label>
+            <label>Date Of Birth</label>
             <input type="date" name="birthday">
         </div>
         <br>
-        <input type="Submit" name="Submit" value="Sign In">
+        <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
-    <form action="home">
-        <input type="submit" value="Go to Home" />
-    </form>
+<a href="/home">Go Home</a>
+
+<!-- DELETE LATER - just to see if the database works -->
+{% for usr in users %}
+    <p>
+        <span>{{usr.userid}}</span> &nbsp;
+        <span>{{usr.username}}</span> &nbsp;
+        <span>{{usr.passwd}}</span> &nbsp;
+        <span>{{usr.firstname}}</span> &nbsp;
+        <span>{{usr.lastname}}</span> &nbsp;
+    </p>
+{% endfor %}
 </body>
 </html>
