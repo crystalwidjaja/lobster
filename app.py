@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 
 ''' table definitions '''
 class User(db.Model):
-    userid = db.Column(db.Integer, primary_key=True)
+    userid = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
     passwd = db.Column(db.String(255), unique=True, nullable=False)
     firstname = db.Column(db.String(255), nullable=False)
@@ -31,24 +31,24 @@ class User(db.Model):
 db.create_all()
 
 #connects default URL of server to render home.html
-
+@app.route('/')
 @app.route('/landing_page', methods=["GET", "POST"])
 def landing_page():
     users = None
     if request.form:
         try:
             """prepare data for primary table extracting from form"""
-            user = User(userid=request.form.get("userid"), username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"),lastname=request.form.get("lastName"))
+            user = User(username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"),lastname=request.form.get("lastName"))
             """add and commit data to user table"""
             db.session.add(user)
             db.session.commit()
         except Exception as e:
-            print("failed to add user")
-            print(e)
+            #print("failed to add user")
+            #print(e)
+            return("Failed to add user. Please try again.")
     users = User.query.all()
     return render_template("landing_page.html", users=users)
 
-@app.route('/')
 @app.route('/home')
 def home_route():
     #function use Flask import (Jinja) to render an HTML template
@@ -100,4 +100,4 @@ def about_us():
     return render_template("about_us.html")
 
 if __name__ == "__main__":
-  app.run(port='80', host='127.0.0.1')
+  app.run(debug=True, port='80', host='127.0.0.1')

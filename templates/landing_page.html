@@ -11,11 +11,6 @@
     <!-- Sign in Form -->
     <form ID="myForm" action="/landing_page" method="POST">
         <div>
-            <label>User Id</label>
-            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="userid" placeholder="User Id">
-        </div>
-        <div>
             <label>Username</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="username" placeholder="Enter Username">
@@ -76,7 +71,8 @@
         <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
-<a href="/home">Go Home</a>
+    <a href="/signin">Already have an account?</a>  <!-- make sign in page -->
+    <a href="/home">Go Home</a>
 
 <!-- DELETE LATER - just to see if the database works -->
 {% for usr in users %}
