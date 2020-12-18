@@ -49,7 +49,7 @@ def landing_page():
         except Exception as e:
             # print("failed to add user")
             # print(e)
-            return ("Failed to add user. Please try again." + str(e))
+            return ("Failed to add user. Please try again.")
     users = User.query.all()
     return render_template("landing_page.html", users=users)
 
