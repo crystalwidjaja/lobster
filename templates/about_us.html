@@ -46,12 +46,24 @@
     }
     </style>
 </head>
-<body>
 {% include 'nav.html' %}
+<body>
+<!-- for every person in aboutus from main.py, these variables are set -->
+{% for about in aboutus: %}
+{% set name = about["name"] %}
+{% set image = about["image"] %}
+{% set birthday = about["birthday"] %}
+{% set funfact = about["funfact"] %}
+{% set sign = about["sign"] %}
 
-
-<h1>About Us</h1>
-<p>My first paragraph.</p>
+<ul> <!-- <ol> tag indicates ordered list -->
+    <h3>Name: <span style="color: #00008B;">{{name}}</span></h3> <!-- variable printed after label -->
+    <img src="{{ url_for('static', filename= image) }}">
+    <li>Birthday: <span style="color: #00008B;">{{birthday}}</span></li>
+    <li>Star Sign: <span style="color: #00008B;">{{sign}}</span></li>
+    <li>Fun Fact: <span style="color: #00008B;">{{funfact}}</span></li>
+</ul>
+{% endfor %}
 
 </body>
 </html>
