@@ -33,3 +33,6 @@ def maggie():
     sign = "Leo"
     profile = {"name": name,  "image": image, "birthday": birthday, "funfact": funfact, "sign": sign}
     return profile
+
+def about():
+    return [ridhima(), sriya(), crystal(), maggie()]
