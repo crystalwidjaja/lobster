@@ -129,5 +129,10 @@ def about_us():
     return render_template("about_us.html")
 
 
+@app.route('/favorites')
+def favorites():
+    #function use Flask import (Jinja) to render an HTML template
+    return render_template("favorites.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port='80', host='127.0.0.1')

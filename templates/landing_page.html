@@ -11,15 +11,20 @@
     <!-- Sign in Form -->
     <form ID="myForm" action="/landing_page" method="POST">
         <div>
+            <label>User Id</label>
+            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
+            <input type="text" name="userid" placeholder="User Id">
+        </div>
+        <div>
             <label>Username</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="text" name="username" placeholder="Enter Username">
         </div>
         <br>
         <div>
             <label>Password</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="password" name="passwd" placeholder="Enter Password" required>
+            <input type="password" name="passwd" placeholder="Enter Password">
         </div>
         <br>
         <!-- VERIFY PASSWORD (work on later)
@@ -29,29 +34,30 @@
             <!-- <input type="password" name="confirmPassword" placeholder="Confirm Password">
         </div>
         -->
+        <br>
         <div>
             <label>First Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="firstName" placeholder="Enter First Name" required>
+            <input type="text" name="firstName" placeholder="Enter First Name">
         </div>
         <br>
         <div>
             <label>Last Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="lastName" placeholder="Enter Last Name" required>
+            <input type="text" name="lastName" placeholder="Enter Last Name">
         </div>
         <br>
         <div>
             <!-- Using email for the type attribute verifies that the input is an email on HTML 5 -->
             <label>Email</label>
-            <input type="text" placeholder="Enter Email Address" name="email_address" required>
+            <input type="email" name="email">
         </div>
         <br>
         <div>
             <label>Gender</label>
-            <select name="gender" required>
+            <select name="gender">
                 <option value="male">Male</option>
-                <option value="female" selected>Female</option>
+                <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
         </div>
@@ -59,16 +65,20 @@
         <div>
             <label>Age</label>
             <!-- Added a predefined value to the input -->
-            <input type="number" placeholder="Enter Age" name="age" value="16">
+            <input type="number" name="age" value="0">
         </div>
-
+        <br>
+        <div>
+            <label>Date Of Birth</label>
+            <input type="date" name="birthday">
+        </div>
         <br>
         <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
-    <a href="/signin">Already have an account? Sign In</a>  <!-- make sign in page -->
-
-    <p><a href="/home">Go Home</a></p>
+<a href="/home">Go Home</a>
+    <br>
+    <a href="/favorites">Go Favorites</a>
 
 <!-- DELETE LATER - just to see if the database works -->
 {% for usr in users %}

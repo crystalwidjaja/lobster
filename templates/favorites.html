@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .box-1{
+	        background-color:#333333;
+	        color:#ffffff;
+
+            border:5px red solid;
+
+            padding:20px;
+
+            width:20%;
+
+            float:left;
+
+            margin-left:50px
+        }
+
+        .box-2{
+	        background-color:#333333;
+	        color:#ffffff;
+
+            border:5px red solid;
+
+            padding:20px;
+
+            width:20%;
+
+            float:left;
+
+            margin-left:150px
+        }
+
+        .box-3{
+	        background-color:#333333;
+	        color:#ffffff;
+
+            border:5px red solid;
+
+            padding:20px;
+
+            width:20%;
+
+            float:right;
+
+            margin-right:50px;
+        }
+
+        .space { margin-top: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Favorites Page</h1>
+    <p>The user will be directed here once they create an account.</p>
+
+    <div class="container">
+        <div class="box-1">
+            <h1>History</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="box-2">
+            <h1>Photography</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="box-3">
+            <h1>Music</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <div class="space">
+        <p>Use the multiple attribute to allow the user to select more than one value.</p>
+        <form action="/action_page">
+            <label for="favorites">Choose a favorite:</label>
+            <select id="favorites" name="favorites" size="3" multiple>
+                <option value="history">History</option>
+                <option value="photography">Photography</option>
+                <option value="music">Music</option>
+            </select><br><br>
+            <input type="submit">
+        </form>
+        <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+    </div>
+</body>
+</html>
