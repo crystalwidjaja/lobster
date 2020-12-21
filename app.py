@@ -4,6 +4,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, request, redirect, url_for
 import os
+import about
 
 ''' database setup  '''
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,8 +14,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
 
 ''' table definitions '''
-
-
 class User(db.Model):
     userid = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
@@ -65,7 +64,7 @@ def signin():
         if (result1 and result2):
             return redirect("/home")
         else:
-            error = 'Invalid Credentials. Please try again.'
+            error = "Invalid Credentials. Please try again."
     return render_template("login.html", error=error)
 
 
@@ -125,6 +124,7 @@ def gift_shop():
 
 @app.route('/about_us')
 def about_us():
+    about()
     # function use Flask import (Jinja) to render an HTML template
     return render_template("about_us.html")
 

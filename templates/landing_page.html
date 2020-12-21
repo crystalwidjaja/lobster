@@ -58,20 +58,15 @@
     <!-- Sign in Form -->
     <form ID="myForm" action="/landing_page" method="POST">
         <div>
-            <label>User Id</label>
-            <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="userid" placeholder="User Id">
-        </div>
-        <div>
             <label>Username</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="username" placeholder="Enter Username">
+            <input type="text" name="username" placeholder="Enter Username" required>
         </div>
         <br>
         <div>
             <label>Password</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="password" name="passwd" placeholder="Enter Password">
+            <input type="password" name="passwd" placeholder="Enter Password" required>
         </div>
         <br>
         <!-- VERIFY PASSWORD (work on later)
@@ -85,19 +80,19 @@
         <div>
             <label>First Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="firstName" placeholder="Enter First Name">
+            <input type="text" name="firstName" placeholder="Enter First Name" required>
         </div>
         <br>
         <div>
             <label>Last Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
-            <input type="text" name="lastName" placeholder="Enter Last Name">
+            <input type="text" name="lastName" placeholder="Enter Last Name" required>
         </div>
         <br>
         <div>
             <!-- Using email for the type attribute verifies that the input is an email on HTML 5 -->
             <label>Email</label>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </div>
         <br>
         <div>
@@ -116,18 +111,20 @@
         </div>
         <br>
         <div>
-            <label>Date Of Birth</label>
+            <label>Date Of Birth</label>  <!-- work on how to save later -->
             <input type="date" name="birthday">
         </div>
         <br>
         <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
+<a href = "/signin">Already have an account? Sign In</a>
+<br>
 <a href="/home">Go Home</a>
-    <br>
-    <a href="/favorites">Go Favorites</a>
+<br>
+<a href="/favorites">Go Favorites</a>
 
-<!-- DELETE LATER - just to see if the database works -->
+<!-- DELETE LATER - just to see if  the database works -->
 {% for usr in users %}
     <p>
         <span>{{usr.userid}}</span> &nbsp;
