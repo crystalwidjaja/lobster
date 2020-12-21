@@ -132,5 +132,11 @@ def favorites():
     #function use Flask import (Jinja) to render an HTML template
     return render_template("favorites.html")
 
+# Not sure if this will work but I'll just leave it here
+#@app.route('/profile/<userid>')
+#def profile(userid):
+    # function use Flask import (Jinja) to render an HTML template
+#    return "Welcome %s" % userid
+
 if __name__ == "__main__":
     app.run(debug=True, port='80', host='127.0.0.1')
