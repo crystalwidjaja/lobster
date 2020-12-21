@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
+    div {
+        background-image: url('muse.jpg');
+    }
     .topnav {
     overflow: hidden;
     background-color: #4F4F4F;
@@ -11,7 +14,7 @@
 
     .topnav a {
     float: left;
-    color: white;
+    color: GoldenRod;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -19,12 +22,12 @@
     }
 
     .topnav a:hover {
-    background-color: #ffe1d3;
+    background-color: #333;
     color: black;
     }
 
     .topnav a.active {
-    background-color: #ffa392;
+    background-color: GoldenRod;
     color: white;
     }
 
@@ -38,11 +41,11 @@
     }
 
     th {
-    background-color: #ffa392;
+    background-color: GoldenRod;
     }
 
     td {
-    background-color: #ffe1d3;
+    background-color: GoldenRod;
     }
     </style>
 </head>
@@ -66,4 +69,7 @@
 {% endfor %}
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </html>
