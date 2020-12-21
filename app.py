@@ -4,7 +4,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, request, redirect, url_for
 import os
-import about
 
 ''' database setup  '''
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -124,7 +123,6 @@ def gift_shop():
 
 @app.route('/about_us')
 def about_us():
-    about()
     # function use Flask import (Jinja) to render an HTML template
     return render_template("about_us.html")
 
