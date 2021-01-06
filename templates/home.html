@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     body  {
-        background-image: url("muse.jpg");
+        background-image: url('/static/muse.jpg'); background-size: cover;
     }
     .topnav {
     overflow: hidden;
@@ -51,7 +51,30 @@
 <body>
 {% include 'nav.html' %}
 
-<h1 style="font-size: 90px; color: GoldenRod; text-align: center; border-style: double; margin: 200px; padding: 20px; background-color: #4F4F4F">Welcome</h1>
+<style>
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+<div class="background">
+    <div class="transbox">
+        <p>This is some text that is placed in the transparent box.</p>
+    </div>
+</div>
 
 </body>
 </html>
