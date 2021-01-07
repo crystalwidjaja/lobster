@@ -1,14 +1,27 @@
+import json
 import requests
 
-url = "https://community-rijksmuseum.p.rapidapi.com/null/collection"
+url = "https://openaccess-api.clevelandart.org/api/artworks/"
 
-querystring = {"key":"undefined","q":"Van Gogh"}
+payload={"skip": "2", "limit": "10"}
+response = requests.get(url, params=payload)
 
-headers = {
-    'x-rapidapi-key': "f355c1253fmshc0d833c7ebaacadp14ddc3jsn0a7f675fda7c",
-    'x-rapidapi-host': "community-rijksmuseum.p.rapidapi.com"
-}
+responseJsonObj = response.json()
+dataList = responseJsonObj.get('data')
 
-response = requests.request("GET", url, headers=headers, params=querystring)
+recordedList = []
+for data in dataList:
+    title = data['title']
+    creationDate = data['creation_date']
+    authorList = []
+    creators = data['creators']
+    for creator in creators:
+        author = creator['description']
+        biography = creator['biography']
+        authorDict = dict({"author": author, "biography": biography})
+        authorList.append(authorDict)
+    recordedList.append(dict({"title": title, 'creationDate': creationDate, 'creators': authorList}))
 
-print(response.text)
+print(recordedList)
+
+
