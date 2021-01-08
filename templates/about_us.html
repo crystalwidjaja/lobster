@@ -4,9 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
-    div {
-        background-image: url('muse.jpg');
-    }
+
     .topnav {
     overflow: hidden;
     background-color: #4F4F4F;
@@ -47,10 +45,19 @@
     td {
     background-color: GoldenRod;
     }
+
+    body  {
+        background-image: url('/static/pillar.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
     </style>
 </head>
 {% include 'nav.html' %}
 <body>
+
 <!-- for every person in aboutus from main.py, these variables are set -->
 {% for about in aboutus: %}
 {% set name = about["name"] %}
@@ -60,11 +67,11 @@
 {% set sign = about["sign"] %}
 
 <ul> <!-- <ol> tag indicates ordered list -->
-    <h3>Name: <span style="color: #00008B;">{{name}}</span></h3> <!-- variable printed after label -->
+    <h3>Name: <span style="color: #FFFFFF;">{{name}}</span></h3> <!-- variable printed after label -->
     <img src="{{ url_for('static', filename= image) }}">
-    <li>Birthday: <span style="color: #00008B;">{{birthday}}</span></li>
-    <li>Star Sign: <span style="color: #00008B;">{{sign}}</span></li>
-    <li>Fun Fact: <span style="color: #00008B;">{{funfact}}</span></li>
+    <li>Birthday: <span style="color: #FFFFFF;">{{birthday}}</span></li>
+    <li>Star Sign: <span style="color: #FFFFFF;">{{sign}}</span></li>
+    <li>Fun Fact: <span style="color: #FFFFFF;">{{funfact}}</span></li>
 </ul>
 {% endfor %}
 
