@@ -36,28 +36,25 @@ class ArtInfo(db.Model):
     biography = db.Column(db.String, nullable=False)
 
 
-class ArtInfo(db.Model):
 
-'''
 # creating a connection to the Database created
-con = sl.connect('userprofiles.db')
+#con = sl.connect('userprofiles.db')
 
 # creating a table within the database
-with con:
-    con.execute("""
-        CREATE TABLE ARTINFO (
-            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-            title TEXT,
-            creation_date INTEGER, 
-            culture TEXT,
-            author TEXT,
-            biography TEXT
-        );       
-    """)
-sql = 'INSERT INTO ARTINFO (id, title, creation_date, culture, author, biography) values(?, ?, ?, ?, ?, ?)'
+#with con:
+#    con.execute("""
+#        CREATE TABLE ARTINFO (
+#            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+#           title TEXT,
+#            creation_date INTEGER,
+#            culture TEXT,
+#            author TEXT,
+#            biography TEXT
+#        );
+#    """)
+#sql = 'INSERT INTO ARTINFO (id, title, creation_date, culture, author, biography) values(?, ?, ?, ?, ?, ?)'
 
-with con:
-    data = con.execute("SELECT * FROM ARTINFO")
-    for row in data:
-        print(row)
-'''
+#with con:
+#    data = con.execute("SELECT * FROM ARTINFO")
+#    for row in data:
+#        print(row)
