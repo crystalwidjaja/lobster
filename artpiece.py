@@ -26,6 +26,8 @@ for data in dataList:
         dict({"title": title, 'creationDate': creationDate, 'culture': culture, 'creators': authorList}))
 
 print(recordedList)
+
+#should create the table using the sqlalchemy library instead of sqlite3 library
 class ArtInfo(db.Model):
     title = db.Column(db.String, nullable=False)
     creation_date = db.Column(db.Integer, primary_key=True, autoincrement=True)

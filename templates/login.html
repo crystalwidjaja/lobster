@@ -68,6 +68,35 @@
     {% if error %}
     <p class="error"><strong>Error:</strong> {{ error }}
         {% endif %}
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #34495e;
+        }
+        .box{
+            width: 300px;
+            padding: 40px;
+            positionL absolute;
+            top 50%;
+            left: 50%
+            transform: translate(-50%,-50%)
+            background: #191919;
+            text-align: center;
+        }
+        .box input[type = "text"],.box input[type = "password"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+    </style>
 </div>
 </body>
 </html>
