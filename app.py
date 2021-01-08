@@ -25,6 +25,7 @@ class User(db.Model):
     age = db.Column(db.Integer, unique=False, nullable=True)
     dob = db.Column(db.DateTime, unique=False, nullable=True)
 
+
     def __repr__(self):
         return '<User %r>' % self.username
 

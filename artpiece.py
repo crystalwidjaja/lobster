@@ -1,4 +1,5 @@
 import requests
+from flask_sqlalchemy import SQLAlchemy
 import sqlite3 as sl
 
 url = "https://openaccess-api.clevelandart.org/api/artworks/"
@@ -25,7 +26,17 @@ for data in dataList:
         dict({"title": title, 'creationDate': creationDate, 'culture': culture, 'creators': authorList}))
 
 print(recordedList)
+class ArtInfo(db.Model):
+    title = db.Column(db.String, nullable=False)
+    creation_date = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    culture = db.Column(db.String, nullable=False)
+    author = db.Column(db.String, nullable=False)
+    biography = db.Column(db.String, nullable=False)
 
+
+class ArtInfo(db.Model):
+
+'''
 # creating a connection to the Database created
 con = sl.connect('userprofiles.db')
 
@@ -47,3 +58,4 @@ with con:
     data = con.execute("SELECT * FROM ARTINFO")
     for row in data:
         print(row)
+'''
