@@ -46,12 +46,11 @@
 
     td {
     background-color: GoldenRod;
+    }body {
+    background: url(https://image.shutterstock.com/image-photo/blank-white-museum-wall-wooden-260nw-196125077.jpg) no-repeat;
+    background-size: 230%;
     }
-
-    body {
-    background: url(https://images.creativemarket.com/0.1.0/ps/1784683/300/200/m2/fpc/wm0/xnar1f3zqhgq615l1clwdympsjsizd8bwsh6q8kirmc94pmlkpk0bd6043xrippf-.jpg?1476994203&s=9bedb3540f68eb7684f5e0f7ac67bcb2) no-repeat;
-    background-size: 200%;
-    }
+    <!-- art wall idea: https://proudtobuild.fultonhomes.com/wp-content/uploads/2019/02/48005425_S.jpg -->
 
     .box-1{
 	background-color:#333333;
@@ -103,7 +102,7 @@
 
 	    border:5px blue solid;
 
-	    padding-right:1000px;
+	    padding-right:20px;
 	    padding-top: 20px;
 	    padding-bottom: 20px;
 	    padding-left: 20px;
@@ -112,9 +111,24 @@
 
 	    margin:20px;
     }
+
+        .box-3{
+        display:inline-block;
+	    background-color:#855E42;
+	    <!-- light brown = C19A6B, dark brown = 855E42 -->
+	    color:#ffffff;
+
+	    border:5px white solid;
+
+	    padding:20px;
+
+        float:left;
+
+	    margin:20px;
+    }
     </style>
 </head>
-<body style="width:200%;">
+<body style="width:230%;">
 <div>
 {% include 'nav.html' %}
 </div>
@@ -122,21 +136,17 @@
 <h1>Photography</h1>
 <p>My first paragraph.</p>
 
-<div class="container">
-    <div class="box-1">
-        <h1>Hello World</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-</div>
 
-<div class="scrolling-pics">
-    <div class="box-1"><h2>Card 1</h2></div>
-    <div class="box-1"><h2>Card 2</h2></div>
-    <div class="box-1"><h2>Card 3</h2></div>
-    <div class="box-1"><h2>Card 4</h2></div>
-</div>
-
-<div class="box-2"><h2>Card 4</h2></div>
+<div class="box-3"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/mme-l-laure-borreau-1863-gustave-courbet.jpg" alt="Mme L...Laure Borreau" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://piction.clevelandart.org/cma/ump.di?e=3633D4677797EE7C5F85A52708022E07D793864033A90FB871EEA1462C4AE5BB&s=21&se=1727484391&v=&f=1965.233_o10.jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://piction.clevelandart.org/cma/ump.di?e=B06DDFF2916C41CB50013EF571266243BEADC7D08B5DBF15F3BBF8C5A29C2274&s=21&se=87832032&v=7&f=1928.8_o10.jpg" alt="The Race Track (Death on a Pale Horse)" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/view-of-schroon-mountain-essex-county-new-york-after-a-storm-thomas-cole.jpg" alt="View of Schroon Mountain, Essex County, New York, After a Storm" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://www.vincentvangogh.org/images/paintings/portrait-of-adeline-ravoux.jpg" alt="Adeline Ravoux" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://images-na.ssl-images-amazon.com/images/I/61fsACmYkyL._AC_.jpg" alt="The Large Plane Trees (Road Menders at Saint-Remy)" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Henri_Rousseau_-_Fight_Between_a_Tiger_and_a_Buffalo.jpg" alt="Fight between a Tiger and a Buffalo" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Monet_Red_kerchief.jpg" alt="The Red Kerchief" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://piction.clevelandart.org/cma/ump.di?e=B06DDFF2916C41CB127F7189B70767AFF2AEF96D4F0D61C4B7BDC29767D30B45&s=21&se=1727484391&v=5&f=1977.43_o10.jpg" alt="Church Street El" style="width:200px;height:250px;"></div>
+<div class="box-3"><img src="https://piction.clevelandart.org/cma/ump.di?e=B06DDFF2916C41CB6F492A68A847F8FCB8CA92339AF74A910670ECEA07AFBD44&s=21&se=848699570&v=6&f=1964.160_o10.jpg" alt="A Woman's Work" style="width:200px;height:250px;"></div>
 
 </body>
 </html>
