@@ -47,14 +47,60 @@
     td {
     background-color: GoldenRod;
     }
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
     </style>
 </head>
 <body>
 {% include 'nav.html' %}
-
-
 <h1>All Galleries</h1>
-<p>My first paragraph.</p>
+
+<div class="gallery">
+    <a target="_blank" href="/static/botany.jpg">
+        <img src="botany.jpg" alt="Botany" width="600" height="400">
+    </a>
+    <div class="desc">Botany</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/static/history.jpg">
+        <img src="history.jpg" alt="History" width="600" height="400">
+    </a>
+    <div class="desc">History</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/static/photography.jpg">
+        <img src="photography.jpg" alt="Photography" width="600" height="400">
+    </a>
+    <div class="desc">Photography</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/static/piano.jpg">
+        <img src="piano.jpg" alt="Piano" width="600" height="400">
+    </a>
+    <div class="desc">Music</div>
+</div>
 
 </body>
 </html>
