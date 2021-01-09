@@ -4,15 +4,10 @@
     <title>login page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-
-    div {
-        background-image: url('muse.jpg');
-    }
     .topnav {
     overflow: hidden;
     background-color: #4F4F4F;
     }
-
     .topnav a {
     float: left;
     color: GoldenRod;
@@ -32,44 +27,7 @@
     color: white;
     }
 
-    table, th, td {
-    border: 1px solid black;
-    padding: 15px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    }
-
-    th {
-    background-color: GoldenRod;
-    }
-
-    td {
-    background-color: GoldenRod;
-    }
-
-    div {
-        background-image: url('okk.jpg');
-    }
-</style>
-</head>
-<body>
-{% include 'nav.html' %}
-
-<div class="container">
-    <h1>login</h1>
-    <br>
-    <form action="/signin" method="POST">
-        <input type="text" placeholder="Username" name="username" >
-        <input type="password" placeholder="Password" name="password">
-        <input type="submit" name= "" value="Login">
-    </form>
-    {% if error %}
-    <p class="error"><strong>Error:</strong> {{ error }}
-        {% endif %}
-    <style>
-        body{
+    body{
             margin: 0;
             padding: 0;
             font-family: sans-serif;
@@ -125,9 +83,22 @@
        .container input[type = "submit"]:hover{
             background: #23cc71;
        }
+</style>
+</head>
+<body>
+{% include 'nav.html' %}
 
-
-    </style>
+<div class="container">
+    <h1>login</h1>
+    <br>
+    <form action="/signin" method="POST">
+        <input type="text" placeholder="Username" name="username" >
+        <input type="password" placeholder="Password" name="password">
+        <input type="submit" name= "" value="Login">
+    </form>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
 </div>
 </body>
 </html>
