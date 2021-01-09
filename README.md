@@ -1,5 +1,10 @@
-# Musuem Exhibit 
+# Museum Exhibit 
 Summary: Our website is a museum exhibit that encompasses the aspects of art/culture/history. Within the website, depending on the user’s interests (figured out through a form), the user will be able to visit a variety of exhibits like photography, international culture, music and more. They also have access to a gift shop where they can buy items that interest them. 
+
+IMPORTANT: To access the website, you must be signed in. Click "Already have an account? Sign In" and sign in with the given usernmane and password.
+Username: test
+Password: test
+
 # Key Features 
  - Exhibits
  
