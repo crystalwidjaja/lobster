@@ -92,13 +92,6 @@ def history():
     # function use Flask import (Jinja) to render an HTML template
     return render_template("history.html")
 
-
-@app.route('/japanese_culture')
-def japanese_culture():
-    # function use Flask import (Jinja) to render an HTML template
-    return render_template("japanese_culture.html")
-
-
 @app.route('/music')
 def music():
     # function use Flask import (Jinja) to render an HTML template
