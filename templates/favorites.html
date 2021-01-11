@@ -1,57 +1,115 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+    body  {
+        background-image: url('/static/library.jpg'); background-size: 100% 100%; background-attachment: fixed;
+    }
+    .topnav {
+    overflow: hidden;
+    background-color: #4F4F4F;
+    }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+    .topnav a {
+    float: left;
+    color: GoldenRod;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
+    .topnav a:hover {
+    background-color: #333;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: GoldenRod;
+    color: white;
+    }
+
+    table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    }
+
+    th {
+    background-color: GoldenRod;
+    }
+
+    td {
+    background-color: GoldenRod;
+    }
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 350px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: 290px;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      color: GoldenRod;
+      background-color: black;
+    }
+
+    h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    }
+    </style>
 </head>
 <body>
+{% include 'nav.html' %}
+<h1>My Favorites</h1>
 
 <div class="gallery">
-    <!-- <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400"> -->
-   </a>
-   <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-       <!-- <img src="img_forest.jpg" alt="Forest" width="600" height="400"> -->
-   </a>
-   <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-   <!-- <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400"> -->
-   </a>
-   <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-        <!-- <img src="img_mountains.jpg" alt="Mountains" width="600" height="400"> -->
+        <img src="/static/botany.jpg" alt="Botany" width="600" height="400">
     </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="desc">Botany</div>
 </div>
 
-<a target="_blank" href="img_forest.jpg">
-    <!-- <img src="img_forest.jpg" alt="Forest" width="600" height="400"> -->
-</a>
+<div class="gallery">
+        <img src="/static/history.jpg" alt="History" width="600" height="400">
+    </a>
+    <div class="desc">History</div>
+</div>
 
+<div class="gallery">
+        <img src="/static/photography.jpg" alt="Photography" width="600" height="400">
+    </a>
+    <div class="desc">Photography</div>
+</div>
+
+<div class="gallery">
+        <img src="/static/piano.jpg" alt="Piano" width="600" height="400">
+    </a>
+    <div class="desc">Music</div>
+</div>
+
+<div class="gallery">
+        <img src="/static/spacee.jpg" alt="Planetarium" width="600" height="400">
+    </a>
+    <div class="desc">Space</div>
+</div>
 </body>
 </html>

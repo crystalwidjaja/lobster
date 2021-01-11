@@ -2,7 +2,7 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask import render_template, request, session, redirect, url_for, g
+from flask import render_template, request, redirect, url_for
 import os
 from about import about
 
@@ -12,9 +12,6 @@ database_file = "sqlite:///{}".format(os.path.join(project_dir, "userprofiles.db
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
-
-'''app secret key'''
-app.secret_key = os.urandom(100)
 
 ''' table definitions '''
 class User(db.Model):
@@ -36,12 +33,6 @@ class User(db.Model):
 ''' table creation '''
 db.create_all()
 
-# global session variable
-@app.before_request
-def before_request():
-    g.user = None
-    if 'user' in session:
-        g.user = session['user']
 
 # connects default URL of server to render home.html
 @app.route('/')
@@ -55,8 +46,6 @@ def landing_page():
             """add and commit data to user table"""
             db.session.add(user)
             db.session.commit()
-            session.pop('user', None)
-            session['user'] = str(request.form['username'])
         except Exception as e:
             # print("failed to add user")
             # print(e)
@@ -74,9 +63,7 @@ def signin():
         result1 = User.query.filter(User.username == POST_USERNAME).first()
         result2 = User.query.filter(User.passwd == POST_PASSWORD).first()
         if (result1 and result2):
-            session.pop('user', None)
-            session['user'] = POST_USERNAME
-            return redirect(url_for('home_route'))
+            return redirect("/home")
         else:
             error = "Invalid Credentials. Please try again."
     return render_template("login.html", error=error)
@@ -85,90 +72,73 @@ def signin():
 @app.route('/home')
 def home_route():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("home.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("home.html")
 
 
 @app.route('/all_galleries')
 def all_galleries():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("all_galleries.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("all_galleries.html")
 
 
 @app.route('/botany')
 def botany():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("botany.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("botany.html")
 
 
 @app.route('/history')
 def history():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("history.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("history.html")
 
 
 @app.route('/japanese_culture')
 def japanese_culture():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("japanese_culture.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("japanese_culture.html")
 
 
 @app.route('/music')
 def music():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("music.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("music.html")
 
 
 @app.route('/photography')
 def photography():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("photography.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("photography.html")
 
 
 @app.route('/planetarium')
 def planetarium():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("planetarium.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("planetarium.html")
 
 
 @app.route('/gift_shop')
 def gift_shop():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("gift_shop.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("gift_shop.html")
 
 
 @app.route('/about_us')
 def about_us():
     # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("about_us.html", aboutus=about(), user=session['user'])
-    return redirect(url_for('landing_page'))
+    return render_template("about_us.html", aboutus=about())
 
 
 @app.route('/favorites')
 def favorites():
-    # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("favorites.html", user=session['user'])
-    return redirect(url_for('landing_page'))
+    #function use Flask import (Jinja) to render an HTML template
+    return render_template("favorites.html")
 
+# Not sure if this will work but I'll just leave it here
+#@app.route('/profile/<userid>')
+#def profile(userid):
+    # function use Flask import (Jinja) to render an HTML template
+#    return "Welcome %s" % userid
 
 if __name__ == "__main__":
     app.run(debug=True, port='80', host='127.0.0.1')
