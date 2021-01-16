@@ -6,6 +6,12 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Username: test
  - Password: test
 
+# Completed Goals for Team
+ - Art Exhibit Front End
+ - Log in with username and password
+ - Favorites Page
+ - About Us Page
+
 # Key Features 
  - Exhibits
  
