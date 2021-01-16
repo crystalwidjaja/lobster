@@ -27,7 +27,11 @@ class User(db.Model):
     gender = db.Column(db.String(10), unique=False, nullable=True)
     age = db.Column(db.Integer, unique=False, nullable=True)
     dob = db.Column(db.DateTime, unique=False, nullable=True)
-
+    botany = db.Column(db.Integer, unique=False, nullable=True)
+    history = db.Column(db.Integer, unique=False, nullable=True)
+    photography = db.Column(db.Integer, unique=False, nullable=True)
+    music = db.Column(db.Integer, unique=False, nullable=True)
+    space = db.Column(db.Integer, unique=False, nullable=True)
 
     def __repr__(self):
         return '<User %r>' % self.username
@@ -51,8 +55,9 @@ def landing_page():
     if request.form:
         try:
             """prepare data for primary table extracting from form"""
-            user = User(username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"), lastname=request.form.get("lastName"), email_address=request.form.get("email_address"), gender=request.form.get("gender"), age=request.form.get("age"))
-            """add and commit data to user table"""
+            user = User(username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"), lastname=request.form.get("lastName"),
+                        email_address=request.form.get("email_address"), gender=request.form.get("gender"), age=request.form.get("age"), botany=request.form.get("botany"), history=request.form.get("history"),
+                        photography=request.form.get("photography"), music=request.form.get("music"), space=request.form.get("space"))
             db.session.add(user)
             db.session.commit()
             session.pop('user', None)
@@ -165,8 +170,12 @@ def about_us():
 @app.route('/favorites')
 def favorites():
     # function use Flask import (Jinja) to render an HTML template
+    selected_user = None
+    selected_fav = None
     if g.user:
-        return render_template("favorites.html", user=session['user'])
+        selected_user = session['user']
+        selected_fav = User.query.filter_by(username=selected_user).first()
+        return render_template("favorites.html", user=session['user'], selected_fav=selected_fav)
     return redirect(url_for('landing_page'))
 
 
