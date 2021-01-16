@@ -6,11 +6,13 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Username: test
  - Password: test
 
-# Completed Goals for Team
- - Art Exhibit Front End
- - Log in with username and password
+# Completed Goals for Team (Week 1/11/2021)
+ - Log in
+   - The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
  - Favorites Page
+   - 
  - About Us Page
+ - Art Exhibit (frontend)
 
 # Key Features 
  - Exhibits
@@ -80,5 +82,6 @@ Sriya Chilla     | sriyachilla |
 
 # Links
 Project Plan: https://docs.google.com/document/d/1oF9n5UcXqyrZDL_TEkaHepAqPodVf1hqFacXWsT9auY/edit?usp=sharing 
+
 Storyboard: https://docs.google.com/presentation/d/1s8BYup586gtJS0jcmAaMi93Vr8C7_bnCXn_vSK02BRc/edit?usp=sharing 
 
