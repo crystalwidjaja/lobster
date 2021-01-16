@@ -1,5 +1,21 @@
-# Musuem Exhibit 
+# Museum Exhibit 
 Summary: Our website is a museum exhibit that encompasses the aspects of art/culture/history. Within the website, depending on the user’s interests (figured out through a form), the user will be able to visit a variety of exhibits like photography, international culture, music and more. They also have access to a gift shop where they can buy items that interest them. 
+
+IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an account? Sign In" and sign in with the given username and password.
+
+ - Username: test
+ - Password: test
+
+# Completed Goals for Team (Week 1/11/2021)
+ - Log in
+   - The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
+ - Favorites Page
+   - The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
+ - About Us Page
+   - The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
+ - Art Exhibit (frontend)
+   - The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information.
+
 # Key Features 
  - Exhibits
  
@@ -68,5 +84,6 @@ Sriya Chilla     | sriyachilla |
 
 # Links
 Project Plan: https://docs.google.com/document/d/1oF9n5UcXqyrZDL_TEkaHepAqPodVf1hqFacXWsT9auY/edit?usp=sharing 
+
 Storyboard: https://docs.google.com/presentation/d/1s8BYup586gtJS0jcmAaMi93Vr8C7_bnCXn_vSK02BRc/edit?usp=sharing 
 

@@ -9,7 +9,7 @@ def ridhima():
 
 def sriya():
     name = "Sriya Chilla"
-    image = "sriya.png"
+    image = "sriya.jpg"
     birthday = "August 29"
     funfact = "I’m david dobrik’s biggest fan!"
     sign = "Virgo"
@@ -18,7 +18,7 @@ def sriya():
 
 def crystal():
     name = "Crystal Widjaja"
-    image = "crystal.png"
+    image = "crystal.jpg"
     birthday = "January 7"
     funfact = "I can play four instruments - piano, guitar, ukulele, and violin."
     sign = "Capricorn"
@@ -27,7 +27,7 @@ def crystal():
 
 def maggie():
     name = "Maggie Killada"
-    image = "maggie.png"
+    image = "maggie.jpg"
     birthday = "August 3"
     funfact = "I love to take pictures and bake in my free time."
     sign = "Leo"

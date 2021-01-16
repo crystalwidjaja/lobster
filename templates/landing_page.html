@@ -4,14 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
-    div {
-        background-image: url('muse.jpg');
-    }
     .topnav {
     overflow: hidden;
     background-color: #4F4F4F;
     }
-
     .topnav a {
     float: left;
     color: GoldenRod;
@@ -31,45 +27,100 @@
     color: white;
     }
 
-    table, th, td {
-    border: 1px solid black;
-    padding: 15px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    }
+    body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #34495e;
+        }
+        .container{
+            width: 800px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: #191919;
+            text-align: center;
+        }
+        .container h1{
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .container input[type = "text"], .container input[type = "password"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+        .container input[type = "text"]:focus,.container input[type = "password"]:focus{
+            width: 280px;
+            border-color: #2ecc71;
+       }
+       .container input[type = "submit"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border-radius: 24px;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            transition: 0.25s;
+            cursor: pointer;
+       }
+       .container input[type = "submit"]:hover{
+            background: #23cc71;
+       }
 
-    th {
-    background-color: GoldenRod;
-    }
+        .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+   }
 
-    td {
-    background-color: GoldenRod;
-    }
-
+   @media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
     </style>
 </head>
 
 <body>
 {% include 'nav.html' %}
-    <h1>Landing Page!</h1>
-    <p>The user will first see the the sign in page before they can see the home page.</p>
 
-    <!-- Sign in Form -->
+<div class="container">
+    <h1>SIGN UP</h1>
+      <!-- Sign in Form -->
     <form ID="myForm" action="/landing_page" method="POST">
-        <div>
-            <label>Username</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="username" placeholder="Enter Username" required>
-        </div>
-        <br>
-        <div>
-            <label>Password</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="password" name="passwd" placeholder="Enter Password" required>
-        </div>
-        <br>
+
         <!-- VERIFY PASSWORD (work on later)
         <div>
             <label>Confirm Password</label> -->
@@ -77,55 +128,44 @@
             <!-- <input type="password" name="confirmPassword" placeholder="Confirm Password">
         </div>
         -->
-        <br>
-        <div>
-            <label>First Name</label>
+
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="firstName" placeholder="Enter First Name" required>
-        </div>
-        <br>
-        <div>
-            <label>Last Name</label>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="lastName" placeholder="Enter Last Name" required>
-        </div>
-        <br>
-        <div>
             <!-- Using email for the type attribute verifies that the input is an email on HTML 5 -->
-            <label>Email</label>
-            <input type="email" name="email" required>
-        </div>
-        <br>
-        <div>
-            <label>Gender</label>
+            <input type="text" name="email" placeholder="Enter Email" required>
             <select name="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
-        </div>
-        <br>
-        <div>
-            <label>Age</label>
             <!-- Added a predefined value to the input -->
-            <input type="number" name="age" value="0">
-        </div>
-        <br>
-        <div>
-            <label>Date Of Birth</label>  <!-- work on how to save later -->
-            <input type="date" name="birthday">
-        </div>
-        <br>
+            <input type="number" name="age" placeholder="Enter Age"><br>
+
+            <h3 style="color:white;" >Choose Favorites:</h3>
+
+            <input type="checkbox" id="botany" name="botany" value="botany">
+            <label style="color:white;" >Botany</label><br>
+            <input type="checkbox" id="history" name="history" value="history">
+            <label style="color:white;" >History</label><br>
+            <input type="checkbox" id="photography" name="photography" value="photography">
+            <label style="color:white;" >Photography</label><br>
+            <input type="checkbox" id="music" name="music" value="music">
+            <label style="color:white;" >Music</label><br>
+            <input type="checkbox" id="space" name="space" value="space">
+            <label style="color:white;" >Space</label><br>
+        <!--<label>Date Of Birth</label>
+            <input type="date" name="birthday"> -->
+
         <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
-<a href = "/signin">Already have an account? Sign In</a>
-<br>
-<a href="/home">Go Home</a>
-<br>
-<a href="/favorites">Go Favorites</a>
+<a href = "/signin" style="color:#3498db" >Already have an account? Sign In</a>
 
-<!-- DELETE LATER - just to see if  the database works -->
+</div>
+
+<!-- DELETE LATER - just to see if the database works -->
 {% for usr in users %}
     <p>
         <span>{{usr.userid}}</span> &nbsp;
