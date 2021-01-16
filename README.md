@@ -10,9 +10,11 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Log in
    - The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
  - Favorites Page
-   - 
+   - The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
  - About Us Page
+   - The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
  - Art Exhibit (frontend)
+   - The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information.
 
 # Key Features 
  - Exhibits
