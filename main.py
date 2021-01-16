@@ -66,6 +66,7 @@ def landing_page():
             # print("failed to add user")
             # print(e)
             return ("Failed to add user. Please try again.")
+        return redirect(url_for('home_route'))
     users = User.query.all()
     return render_template("landing_page.html", users=users)
 
