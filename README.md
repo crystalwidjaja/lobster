@@ -44,20 +44,25 @@ Search bar in the history section
 Week 1 Goals: 
   - Create IntelliJ and GitHub collaborative centers
   - Create pair shares and documents (project plan and journals)
+
 Week 2 Goals:
   - Start adding content to ReadMe and Journals
   - Flesh out overall goals and plans for the website
   - Start storyboarding the website
+
 Week 3 Goals:
   - Create homepage on IntelliJ with navigation bar
   - Start to create login with username and password
+
 Week 4 Goals:
   - Begin creating exhibit 1 using previous data (no databasing)
   - Explore data base collecting process
   - Start interest page
+
 Week 5 Goals:
   - Create second exhibit with databasing
   - Continue the interest page
+
 Midterm Goal: 
   - Finish login and account configurations
   - Create interest board with recommendations
@@ -66,17 +71,21 @@ Midterm Goal:
 Week 7 Goals:
   - Begin work on gift shop
   - Add another exhibit or two
+
 Week 8 Goals:
   - Add shop feature of gift shop
   - Add another exhibit or two
+
 Week 9 Goals:
   - Experiment with planetarium and botany
   - Testing to make sure everything works
+
 Week 10 Goals:
   - Add cosmetics to exhibits
   - Work on search bars
   - Week 11 Goals:
   - Add cosmetics to homepage and login area
+
 Final/N@tM Goal:
   - Add more exhibits
   - Have better cosmetics
