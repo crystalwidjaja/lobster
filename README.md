@@ -8,9 +8,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 
 # Completed Goals for Team (Week 1/11/2021)
  - Log in
-   A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
-   B. Code link: see landing_page.html and login.html
-   C. Runtime link:
+   - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
+   - B. Code link: see landing_page.html and login.html
+   - C. Runtime link:
  - Favorites Page
    A. The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
    B. Code link: see favorites.html and landing_page.html
