@@ -14,7 +14,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
 
 '''app secret key'''
-app.secret_key = os.urandom(100)
+app.secret_key = 'nighthawks'
 
 ''' table definitions '''
 class User(db.Model):
@@ -181,4 +181,4 @@ def favorites():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port='80', host='127.0.0.1')
+    app.run(debug=True, port='8081', host='127.0.0.1')
