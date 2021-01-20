@@ -19,8 +19,4 @@ for data in dataList:
 
 print(recordedList2)
 
-#should create the table using the sqlalchemy library instead of sqlite3 library
-class History(db.Model):
-    place = db.Column(db.String, nullable=False)
-    year = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    info = db.Column(db.String, nullable=False)
+
