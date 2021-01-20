@@ -110,16 +110,16 @@
 </head>
 
 <body>
-{% include 'nav.html' %}
 
 <div class="container">
-    <h1>Landing Page!</h1>
+    <h1>SIGN UP</h1>
       <!-- Sign in Form -->
     <form ID="myForm" action="/landing_page" method="POST">
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="username" placeholder="Enter Username" required>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="password" name="passwd" placeholder="Enter Password" required>
+
         <!-- VERIFY PASSWORD (work on later)
         <div>
             <label>Confirm Password</label> -->
@@ -127,6 +127,7 @@
             <!-- <input type="password" name="confirmPassword" placeholder="Confirm Password">
         </div>
         -->
+
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
             <input type="text" name="firstName" placeholder="Enter First Name" required>
             <!-- Placeholder is a predefined value but disappears when user clicks in square -->
@@ -139,22 +140,31 @@
                 <option value="other">Other</option>
             </select>
             <!-- Added a predefined value to the input -->
-            <input type="number" name="age" placeholder="Enter Age">
+            <input type="number" name="age" placeholder="Enter Age"><br>
+
+            <h3 style="color:white;" >Choose Favorites:</h3>
+
+            <input type="checkbox" id="botany" name="botany" value="botany">
+            <label style="color:white;" >Botany</label><br>
+            <input type="checkbox" id="history" name="history" value="history">
+            <label style="color:white;" >History</label><br>
+            <input type="checkbox" id="photography" name="photography" value="photography">
+            <label style="color:white;" >Photography</label><br>
+            <input type="checkbox" id="music" name="music" value="music">
+            <label style="color:white;" >Music</label><br>
+            <input type="checkbox" id="space" name="space" value="space">
+            <label style="color:white;" >Space</label><br>
         <!--<label>Date Of Birth</label>
             <input type="date" name="birthday"> -->
 
         <input type="Submit" name="Submit" value="Sign Up">
     </form>
 <br>
-<a href = "/signin">Already have an account? Sign In</a>
-<br>
-<a href="/home">Go Home</a>
-<br>
-<a href="/favorites">Go Favorites</a>
+<a href = "/signin" style="color:#3498db" >Already have an account? Sign In</a>
 
 </div>
 
-<!-- DELETE LATER - just to see if  the database works -->
+<!-- DELETE LATER - just to see if the database works -->
 {% for usr in users %}
     <p>
         <span>{{usr.userid}}</span> &nbsp;

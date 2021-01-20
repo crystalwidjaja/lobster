@@ -47,7 +47,7 @@ import sqlite3 as sl
 
 url = "https://openaccess-api.clevelandart.org/api/artworks/"
 
-payload = {"skip": "2", "limit": "10"}
+payload = {"skip": "2", "limit": "20"}
 response = requests.get(url, params=payload)
 
 responseJsonObj = response.json()
@@ -71,12 +71,12 @@ for data in dataList:
 print(recordedList)
 
 #should create the table using the sqlalchemy library instead of sqlite3 library
-class ArtInfo(db.Model):
-    title = db.Column(db.String, nullable=False)
-    creation_date = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    culture = db.Column(db.String, nullable=False)
-    author = db.Column(db.String, nullable=False)
-    biography = db.Column(db.String, nullable=False)
+#class ArtInfo(db.Model):
+    #title = db.Column(db.String, nullable=False)
+    #creation_date = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    #culture = db.Column(db.String, nullable=False)
+    #author = db.Column(db.String, nullable=False)
+    #biography = db.Column(db.String, nullable=False)
 
 
 

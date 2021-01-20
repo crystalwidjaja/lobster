@@ -104,35 +104,46 @@
 <body>
 {% include 'nav.html' %}
 <h1>My Favorites</h1>
+    <p>
+        {% if selected_fav.botany == 'botany' %}
+            <div class="gallery">
+                <img src="/static/botany.jpg" alt="Botany" width="600" height="400">
+                </a>
+                <div class="desc">Botany</div>
+            </div>
+        {% endif %}
 
-<div class="gallery">
-        <img src="/static/botany.jpg" alt="Botany" width="600" height="400">
-    </a>
-    <div class="desc">Botany</div>
-</div>
+        {% if selected_fav.history == 'history' %}
+        <div class="gallery">
+            <img src="/static/history.jpg" alt="History" width="600" height="400">
+            </a>
+            <div class="desc">History</div>
+        </div>
+        {% endif %}
 
-<div class="gallery">
-        <img src="/static/history.jpg" alt="History" width="600" height="400">
-    </a>
-    <div class="desc">History</div>
-</div>
+        {% if selected_fav.music == 'music' %}
+            <div class="gallery">
+                <img src="/static/piano.jpg" alt="Piano" width="600" height="400">
+                </a>
+                <div class="desc">Music</div>
+            </div>
+        {% endif %}
 
-<div class="gallery">
-        <img src="/static/photography.jpg" alt="Photography" width="600" height="400">
-    </a>
-    <div class="desc">Photography</div>
-</div>
+        {% if selected_fav.photography == 'photography' %}
+            <div class="gallery">
+                <img src="/static/photography.jpg" alt="Photography" width="600" height="400">
+                </a>
+                <div class="desc">Photography</div>
+            </div>
+        {% endif %}
 
-<div class="gallery">
-        <img src="/static/piano.jpg" alt="Piano" width="600" height="400">
-    </a>
-    <div class="desc">Music</div>
-</div>
-
-<div class="gallery">
-        <img src="/static/spacee.jpg" alt="Planetarium" width="600" height="400">
-    </a>
-    <div class="desc">Space</div>
-</div>
+        {% if selected_fav.space == 'space' %}
+            <div class="gallery">
+                <img src="/static/spacee.jpg" alt="Planetarium" width="600" height="400">
+                </a>
+                <div class="desc">Space</div>
+            </div>
+        {% endif %}
+    </p>
 </body>
 </html>
