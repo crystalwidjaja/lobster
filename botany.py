@@ -1,3 +1,5 @@
+import json
+
 import requests
 
 from main import Botany
@@ -24,6 +26,8 @@ for data in dataList:
 print(recordedList1)
 
 ''' Add Botany information into Records into the DB '''
+
+
 for record in recordedList1:
     commonName = record['common_name']
     scientificName = record['scientific_name']
@@ -31,4 +35,6 @@ for record in recordedList1:
     familyCommonName = record['family_common_name']
     imageURL = record['image_url']
 
-    botanyInfo = Botany(commonName=record['common_name'], scientificName=record['scientific_name'], year=record['year'], familyCommonName=record['family_common_name'], imageURL=record['image_url']))
+    botanyInfo = Botany(commonName=record['common_name'], scientificName=record['scientific_name'], year=json.dumps(record['year']), familyCommonName=record['family_common_name'], imageURL=record['image_url']))
+    db.session.add(botanyInfo)
+    db.session.commit()

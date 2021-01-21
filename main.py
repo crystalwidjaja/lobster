@@ -50,7 +50,7 @@ class Botany(db.Model):
     botanyId = db.Column(db.Integer, primary_key=True, autoincrement=True)
     commonName = db.Column(db.String, nullable=False)
     scientificName = db.Column(db.String, nullable=False)
-    year = db.Column(db.String, nullable=False)
+    year = db.Column(db.Integer, nullable=False)
     familyCommonName = db.Column(db.String, nullable=False)
     imageURL = db.Column(db.String, nullable=False)
 
