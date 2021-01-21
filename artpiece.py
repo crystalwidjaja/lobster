@@ -1,4 +1,9 @@
+import json
+import os
+from datetime import datetime
+
 import requests
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3 as sl
 
@@ -44,6 +49,15 @@ import sqlite3 as sl
 
 #def art_pics():
 #    return [laure_borreau(), twilight_in_the_wilderness(), the_race_track(), view_of_schroon_mountain(), adeline_ravoux(), large_plane_trees(), tiger_and_buffalo(), red_kerchief(), church_street_el(), womans_work()]
+from main import ArtInfo
+
+''' Get db object adding entires to ArtInfo table '''
+project_dir = os.path.dirname(os.path.abspath(__file__))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "userprofiles.db"))
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = database_file
+db = SQLAlchemy(app)
+
 
 url = "https://openaccess-api.clevelandart.org/api/artworks/"
 
@@ -66,9 +80,26 @@ for data in dataList:
         authorDict = dict({"author": author, "biography": biography})
         authorList.append(authorDict)
     recordedList.append(
-        dict({"title": title, 'creationDate': creationDate, 'culture': culture, 'creators': authorList}))
+        dict({'title': title, 'creationDate': creationDate, 'culture': culture, 'creators': authorList}))
+
 
 print(recordedList)
+
+''' Add ArtInfo Records into DB '''
+
+for record in recordedList:
+    title = record['title']
+    creationDate = record['creation_date']
+    culture = record['culture']
+    authorInfo = json.dumps(record['creators'])
+
+    artInfo = ArtInfo(title=record['title'], creationDate=record['creationDate'], culture=json.dumps(record['culture']), authorInfo=json.dumps(record['creators']))
+    db.session.add(artInfo)
+    db.session.commit()
+
+artInfos = ArtInfo.query.all()
+print(artInfos)
+
 
 #should create the table using the sqlalchemy library instead of sqlite3 library
 #class ArtInfo(db.Model):

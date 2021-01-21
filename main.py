@@ -36,6 +36,15 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+class ArtInfo(db.Model):
+    artInfoId = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String, nullable=False)
+    creationDate = db.Column(db.String, nullable=False)
+    culture = db.Column(db.String, nullable=False)
+    authorInfo = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return '<ArtInfo %r>' % self.title
 
 ''' table creation '''
 db.create_all()
