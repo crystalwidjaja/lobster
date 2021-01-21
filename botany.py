@@ -21,3 +21,12 @@ for data in dataList:
 
 print(recordedList1)
 
+''' Add Botany information into Records into the DB '''
+for record in recordedList1:
+    commonName = record['common_name']
+    scientificName = record['scientific_name']
+    year = record['year']
+    familyCommonName = record['family_common_name']
+    imageURL = record['image_url']
+
+    botanyInfo = Botany(commonName=record['common_name'], scientificName=record['scientific_name'], year=record['year'], familyCommonName=record['family_common_name'], imageURL=record['image_url']))
