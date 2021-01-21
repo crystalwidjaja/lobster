@@ -1,7 +1,5 @@
 import json
-
 import requests
-
 from main import Botany
 
 url = "https://trefle.io/api/v1/plants?token=5-M6tX9TBt0XVNIgKY7d1V26zFEPH8Vm-WoGmZQfaMI"
@@ -38,3 +36,6 @@ for record in recordedList1:
     botanyInfo = Botany(commonName=record['common_name'], scientificName=record['scientific_name'], year=json.dumps(record['year']), familyCommonName=record['family_common_name'], imageURL=record['image_url']))
     db.session.add(botanyInfo)
     db.session.commit()
+
+botanyInfos = Botany.query.all()
+print(botanyInfos)
