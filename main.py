@@ -17,6 +17,8 @@ db = SQLAlchemy(app)
 app.secret_key = 'nighthawks'
 
 ''' table definitions '''
+
+
 class User(db.Model):
     userid = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
@@ -36,6 +38,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+
 class ArtInfo(db.Model):
     artInfoId = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String, nullable=False)
@@ -46,6 +49,7 @@ class ArtInfo(db.Model):
     def __repr__(self):
         return '<ArtInfo %r>' % self.title
 
+
 class Botany(db.Model):
     botanyId = db.Column(db.Integer, primary_key=True, autoincrement=True)
     commonName = db.Column(db.String, nullable=False)
@@ -55,10 +59,12 @@ class Botany(db.Model):
     imageURL = db.Column(db.String, nullable=False)
 
     def __repr__(self):
-        return '<Botany %r>' % self.title
+        return '<Botany %r>' % self.commonName
+
 
 ''' table creation '''
 db.create_all()
+
 
 # global session variable
 @app.before_request
@@ -66,6 +72,7 @@ def before_request():
     g.user = None
     if 'user' in session:
         g.user = session['user']
+
 
 # connects default URL of server to render home.html
 @app.route('/')
@@ -75,9 +82,13 @@ def landing_page():
     if request.form:
         try:
             """prepare data for primary table extracting from form"""
-            user = User(username=request.form.get("username"), passwd=request.form.get("passwd"), firstname=request.form.get("firstName"), lastname=request.form.get("lastName"),
-                        email_address=request.form.get("email_address"), gender=request.form.get("gender"), age=request.form.get("age"), botany=request.form.get("botany"), history=request.form.get("history"),
-                        photography=request.form.get("photography"), music=request.form.get("music"), space=request.form.get("space"))
+            user = User(username=request.form.get("username"), passwd=request.form.get("passwd"),
+                        firstname=request.form.get("firstName"), lastname=request.form.get("lastName"),
+                        email_address=request.form.get("email_address"), gender=request.form.get("gender"),
+                        age=request.form.get("age"), botany=request.form.get("botany"),
+                        history=request.form.get("history"),
+                        photography=request.form.get("photography"), music=request.form.get("music"),
+                        space=request.form.get("space"))
             db.session.add(user)
             db.session.commit()
             session.pop('user', None)

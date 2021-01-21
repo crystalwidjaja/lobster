@@ -1,6 +1,17 @@
 import json
+import os
 import requests
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 from main import Botany
+
+''' Get db object adding entires to ArtInfo table '''
+project_dir = os.path.dirname(os.path.abspath(__file__))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "userprofiles.db"))
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = database_file
+db = SQLAlchemy(app)
 
 url = "https://trefle.io/api/v1/plants?token=5-M6tX9TBt0XVNIgKY7d1V26zFEPH8Vm-WoGmZQfaMI"
 
@@ -26,14 +37,15 @@ print(recordedList1)
 ''' Add Botany information into Records into the DB '''
 
 
-for record in recordedList1:
-    commonName = record['common_name']
-    scientificName = record['scientific_name']
-    year = record['year']
-    familyCommonName = record['family_common_name']
-    imageURL = record['image_url']
+for botanyInfo in recordedList1:
+    commonName = botanyInfo['common_name']
+    scientificName = botanyInfo['scientific_name']
+    year = botanyInfo['year']
+    familyCommonName = botanyInfo['family_common_name']
+    imageURL = botanyInfo['image_url']
 
-    botanyInfo = Botany(commonName=record['common_name'], scientificName=record['scientific_name'], year=json.dumps(record['year']), familyCommonName=record['family_common_name'], imageURL=record['image_url']))
+    # Botany(commonName=botanyInfo['common_name'], scientificName=botanyInfo['scientific_name'], year=int(botanyInfo['year']), familyCommonName=botanyInfo['family_common_name'], image_url=botanyInfo['image_url'])
+    botanyInfo = Botany(commonName=botanyInfo['common_name'], scientificName=botanyInfo['scientific_name'], year=int(botanyInfo['year']), familyCommonName=botanyInfo['family_common_name'], imageURL=botanyInfo['image_url'])
     db.session.add(botanyInfo)
     db.session.commit()
 
