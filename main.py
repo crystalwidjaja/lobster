@@ -218,4 +218,4 @@ def easteregg_route():
     return redirect(url_for('landing_page'))
 
 if __name__ == "__main__":
-    app.run(debug=True, port='80', host='127.0.0.1')
+    app.run(debug=True, port='8081', host='127.0.0.1')
