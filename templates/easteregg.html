@@ -3,8 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    body  {
-        background-image: url('/static/muse.jpg'); background-size: cover;
+
+    div {
+        background-image: url('muse.jpg');
     }
     .topnav {
     overflow: hidden;
@@ -47,20 +48,13 @@
     background-color: GoldenRod;
     }
 
-    div.transbox {
-     margin: 200 px;
-    background-color: #000000;
-     opacity: 0.6;
+<!-- Adding background image -->
+    body {
+        background: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.organicgardener.com.au%2Fblogs%2Fgreenhouse-growing&psig=AOvVaw3TmEiYaK5RLneKfgEjLXFM&ust=1608608588974000&source=images&cd=vfe&ved=2ahUKEwjE2L-NlN7tAhWDIH0KHRWGDFEQjRx6BAgAEAc) no-repeat;
+        background-size: cover;
     }
 
-    div.transbox p {
-      margin: 5%;
-        font-size: 120 px;
-        text-align: center;
-      color: GoldenRod;
-    }
-
-   .topnav input[type=text] {
+ .topnav input[type=text] {
     float: right;
     padding: 6px;
     border: none;
@@ -82,32 +76,14 @@
     border: 1px solid #ccc;
   }
 }
-
-.button {
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 8px;
-  margin: 2px 1px;
-  cursor: pointer;
-}
-
-.button1 {background-color: #000000;}
     </style>
-
 </head>
 <body>
 {% include 'nav.html' %}
 
-<button class="button button1">Secret</button>
 
-<div class="transbox">
-    <p>Welcome</p>
-</div>
-</div>
+<h1>AP Notes</h1>
+<p>Hi</p>
 
 </body>
 </html>
