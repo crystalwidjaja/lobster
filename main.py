@@ -210,6 +210,12 @@ def favorites():
         return render_template("favorites.html", user=session['user'], selected_fav=selected_fav)
     return redirect(url_for('landing_page'))
 
+@app.route('/easteregg')
+def easteregg_route():
+    # function use Flask import (Jinja) to render an HTML template
+    if g.user:
+        return render_template("easteregg.html", user=session['user'])
+    return redirect(url_for('landing_page'))
 
 if __name__ == "__main__":
     app.run(debug=True, port='8081', host='127.0.0.1')
