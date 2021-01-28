@@ -104,5 +104,5 @@ Project Plan: https://docs.google.com/document/d/1oF9n5UcXqyrZDL_TEkaHepAqPodVf1
 
 Storyboard: https://docs.google.com/presentation/d/1s8BYup586gtJS0jcmAaMi93Vr8C7_bnCXn_vSK02BRc/edit?usp=sharing 
 
-Easter Egg: http://127.0.0.1:8081/easteregg
+Easter Egg: http://104.63.255.249:8081/easteregg
 
