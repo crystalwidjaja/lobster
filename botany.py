@@ -44,7 +44,6 @@ for botanyInfo in recordedList1:
     familyCommonName = botanyInfo['family_common_name']
     imageURL = botanyInfo['image_url']
 
-    # Botany(commonName=botanyInfo['common_name'], scientificName=botanyInfo['scientific_name'], year=int(botanyInfo['year']), familyCommonName=botanyInfo['family_common_name'], image_url=botanyInfo['image_url'])
     botanyInfo = Botany(commonName=botanyInfo['common_name'], scientificName=botanyInfo['scientific_name'], year=int(botanyInfo['year']), familyCommonName=botanyInfo['family_common_name'], imageURL=botanyInfo['image_url'])
     db.session.add(botanyInfo)
     db.session.commit()
