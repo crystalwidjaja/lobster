@@ -6,7 +6,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Username: test
  - Password: test
 
-# Completed Goals for Team (Week 1/11/2021)
+# Completed Tickets/Goals for Team (Week 1/11/2021)
  - [Log in](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
    - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
    - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
@@ -24,7 +24,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. see [photography.html](templates/photography.html) and [artpiece.py](artpiece.py)
    - C. Runtime link: http://104.63.255.249:8081/photography
    
-# Completed Goals for Team (Week 2/1/2021)
+# Completed Tickets/Goals for Team (Week 2/1/2021)
  - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120)
    - A. The planetarium exhibit will include a 3D panorama of solar system that has interactive to drag around and explore. It will also have “infospots” that the user can click on to bring a certain planet to the center of attention. Clicking on “info spots” will also shows information from database about planets.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
