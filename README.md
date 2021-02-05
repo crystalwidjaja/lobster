@@ -14,15 +14,15 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Favorites Page
    - A. The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
    - B. Code link: see [favorites.html](templates/favorites.html) and [landing_page.html](templates/landing_page.html)
-   - C. Runtime link:http://104.63.255.249:8081/
+   - C. Runtime link:http://104.63.255.249:8081/favorites
  - About Us Page
    - A The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
    - B. Code link: see [about.py](about.py) and [about_us.html](templates/about_us.html)
-   - C. Runtime link:http://104.63.255.249:8081/
+   - C. Runtime link:http://104.63.255.249:8081/about_us
  - Art Exhibit (frontend)
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information.
    - B. see [photography.html](templates/photography.html) and [artpiece.py](artpiece.py)
-   - C. Runtime link:http://104.63.255.249:8081/
+   - C. Runtime link:http://104.63.255.249:8081/photography
    
 
 # Key Features 
