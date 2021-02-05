@@ -26,20 +26,20 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    
 # Completed Goals for Team (Week 2/1/2021)
  - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120)
-   - A. Description
+   - A. The planetarium exhibit will include a 3D panorama of solar system that has interactive to drag around and explore. It will also have “infospots” that the user can click on to bring a certain planet to the center of attention. Clicking on “info spots” will also shows information from database about planets.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
    - C. Runtime link: http://104.63.255.249:8081/planetarium
- - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
-   - A. Description
-   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+ - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483)
+   - A. The music exhibit will be split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The code will primarily use HTML and CSS. The images will be buttons that can play various decade themed playlists
+   - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
    - C. Runtime link: http://104.63.255.249:8081/music
- - [Carousel](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
-   - A. Description
-   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+ - [Carousel](https://github.com/crystalwidjaja/lobster/projects/2#card-53783149)
+   - A. The carousel will be an image slider for the botany exhibit (using plants for images). The code will use mainly HTML and CSS with a little bit of JS for the radio button. The carousel is clickable to allow the user to move to the next image.
+   - B. Code link: see [botany.py](botany.py) and [botany.html](templates/botany.html)
    - C. Runtime link: http://104.63.255.249:8081/
- - [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
-   - A. Description
-   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+ - [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136)
+   - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
+   - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
    - C. Runtime link: http://104.63.255.249:8081/planetarium
 
 # Key Features 
