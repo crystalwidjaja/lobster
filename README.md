@@ -23,7 +23,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information.
    - B. see photography.html and artpiece.py
    - C. Runtime link:http://104.63.255.249:8081/
-   - (Photography)[templates/photography.html]
+   - [Photography](templates/photography.html)
 
 # Key Features 
  - Exhibits
