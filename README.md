@@ -25,9 +25,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - C. Runtime link: http://104.63.255.249:8081/photography
    
 # Completed Goals for Team (Week 2/1/2021)
- - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+ - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120)
    - A. Description
-   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - B. Code link: see [planetarium.html](templates/planetarium.html)
    - C. Runtime link: http://104.63.255.249:8081/planetarium
  - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
    - A. Description
