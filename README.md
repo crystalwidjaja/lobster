@@ -24,6 +24,23 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. see [photography.html](templates/photography.html) and [artpiece.py](artpiece.py)
    - C. Runtime link: http://104.63.255.249:8081/photography
    
+# Completed Goals for Team (Week 2/1/2021)
+ - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
+ - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/music
+ - [Carousel](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/
+ - [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
 
 # Key Features 
  - Exhibits
