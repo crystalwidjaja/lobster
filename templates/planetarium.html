@@ -75,6 +75,11 @@
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
+
+  .img-box {
+      margin: 150px auto;
+      text-align: center;
+  }
 }
     </style>
 </head>
@@ -82,7 +87,13 @@
 {% include 'nav.html' %}
 
 <h1>Planetarium</h1>
-<p>Hi</p>
+<p>360 pano of space</p>
+
+<div class="pano-image"></div>
+
+<div class="img-box">
+    <iframe width="600px" height="360px" frameborder="0" src="https://momento360.com/e/u/70bd2266b7e04e9283ba770047ca25ee?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium"></iframe>
+</div>
 
 </body>
 </html>
