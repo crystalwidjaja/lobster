@@ -7,22 +7,40 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Password: test
 
 # Completed Goals for Team (Week 1/11/2021)
- - Log in
+ - [Log in](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
    - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password.
-   - B. Code link: see landing_page.html and login.html
-   - C. Runtime link:http://104.63.255.249:8081/
- - Favorites Page
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/
+ - [Favorites Page](https://github.com/crystalwidjaja/lobster/projects/2#card-51242483)
    - A. The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
-   - B. Code link: see favorites.html and landing_page.html
-   - C. Runtime link:http://104.63.255.249:8081/
- - About Us Page
+   - B. Code link: see [favorites.html](templates/favorites.html) and [landing_page.html](templates/landing_page.html)
+   - C. Runtime link: http://104.63.255.249:8081/favorites
+ - [About Us Page](https://github.com/crystalwidjaja/lobster/projects/2#card-52328560)
    - A The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
-   - B. Code link: see about.py and about_us.html
-   - C. Runtime link:http://104.63.255.249:8081/
- - Art Exhibit (frontend)
+   - B. Code link: see [about.py](about.py) and [about_us.html](templates/about_us.html)
+   - C. Runtime link: http://104.63.255.249:8081/about_us
+ - [Art Exhibit (frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51316952)
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information.
-   - B. see photography.html and artpiece.py
-   - C. Runtime link:http://104.63.255.249:8081/
+   - B. see [photography.html](templates/photography.html) and [artpiece.py](artpiece.py)
+   - C. Runtime link: http://104.63.255.249:8081/photography
+   
+# Completed Goals for Team (Week 2/1/2021)
+ - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
+ - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/music
+ - [Carousel](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/
+ - [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-51525126)
+   - A. Description
+   - B. Code link: see [landing_page.html](templates/landing_page.html) and [login.html](templates/login.html)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
 
 # Key Features 
  - Exhibits
