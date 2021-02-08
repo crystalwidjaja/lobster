@@ -143,22 +143,6 @@ def botany():
     return redirect(url_for('landing_page'))
 
 
-@app.route('/history')
-def history():
-    # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("history.html", user=session['user'])
-    return redirect(url_for('landing_page'))
-
-
-@app.route('/japanese_culture')
-def japanese_culture():
-    # function use Flask import (Jinja) to render an HTML template
-    if g.user:
-        return render_template("japanese_culture.html", user=session['user'])
-    return redirect(url_for('landing_page'))
-
-
 @app.route('/music')
 def music():
     # function use Flask import (Jinja) to render an HTML template
