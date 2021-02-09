@@ -86,8 +86,7 @@ def landing_page():
                         firstname=request.form.get("firstName"), lastname=request.form.get("lastName"),
                         email_address=request.form.get("email_address"), gender=request.form.get("gender"),
                         age=request.form.get("age"), botany=request.form.get("botany"),
-                        history=request.form.get("history"),
-                        photography=request.form.get("photography"), music=request.form.get("music"),
+                        photography=request.form.get("art"), music=request.form.get("music"),
                         space=request.form.get("space"))
             db.session.add(user)
             db.session.commit()
