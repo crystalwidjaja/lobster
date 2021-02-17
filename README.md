@@ -42,6 +42,16 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
    - C. Runtime link: http://104.63.255.249:8081/planetarium
 
+# Completed Tickets/Goals for Team (Week 2/15/2021)
+ - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120)
+   - A. The planetarium exhibit will include a 3D panorama of solar system that has interactive to drag around and explore. It will also have “infospots” that the user can click on to bring a certain planet to the center of attention. Clicking on “info spots” will also shows information from database about planets.
+   - B. Code link: see [planetarium.html](templates/planetarium.html)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
+ - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483)
+   - A. The music exhibit will be split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The code will primarily use HTML and CSS. The images will be buttons that can play various decade themed playlists
+   - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
+   - C. Runtime link: http://104.63.255.249:8081/music
+
 # Key Features 
  - Exhibits
  
