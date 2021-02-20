@@ -65,6 +65,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 - CrossOver Suggestions from other team (Sushi): 
   - 1) For the login page, make sure not to display the output information on that same page. Make sure you hide that information once it is stored within the database. 
   - 2) Make sure the frontend for the login and sign in page have the same theme style that as the museum exhibit colors because they are very different. (presentation wise)
+- Crossover Revisions: 
+  - 1) For the login page the color scheme is now corrected and fits in with the museum scheme colors. 
+  - 2) For the login page there is no longer any information outputed within the same information. All the information is stored within the database and hidden from the users. 
 
 - COLLEGE BOARD REQUIREMENTS
   - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
