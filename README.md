@@ -52,6 +52,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
    - C. Runtime link: http://lobstersmuseum.cf/music
 
+- College Board
+  - Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in
+
 # Key Features 
  - Exhibits
  
