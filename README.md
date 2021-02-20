@@ -45,7 +45,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 # Completed Tickets/Goals for Team (Week 2/15/2021)
 ### CODE REVIEW IS INCORPORATED IN THE FOLLOWING TICKET OVERVIEWS
  - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120) by Sriya
-   - A. The planetarium exhibit will include a panorama of solar system. It will also have [“infospots”](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) (located on top of each Jupiter, for example) that the user can click on. Clicking on “info spots” will also shows information from database about planets.
+   - A. The planetarium exhibit will include a panorama of solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) that the user can click on. Clicking on “info spots” will also shows information from database about planets.
     - NOTE: The infospot feature is still in progress. Currently, Jupiter is the only working infospot and will give an alert when clicked on, but still needs a link to the database. My goal is to complete all infospots for next week.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
    - C. Runtime link: http://lobstersmuseum.cf/planetarium
