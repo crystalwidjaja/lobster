@@ -56,6 +56,12 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The art exhibit presents the information for each of the art pieces and is immediately available when you hover over the art piece. This code primarily uses backend python. 
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photgraphy.html)
    - C. Runtime Link: http://lobstersmuseum.cf/art
+- [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136)
+   - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
+   - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
+   - C. Runtime link: http://104.63.255.249:8081/planetarium
+
+
 - COLLEGE BOARD REQUIREMENTS
   - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
   - LISTS: One way we use lists is through extracting the data from a source through a REST API. Evidence in [botany.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/botany.py#L25-#L52)
