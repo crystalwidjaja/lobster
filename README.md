@@ -57,10 +57,10 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The art exhibit presents the information for each of the art pieces and is immediately available when you hover over the art piece. This code primarily uses backend python. 
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photgraphy.html)
    - C. Runtime Link: http://lobstersmuseum.cf/art
-- [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136)
+- [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136) by Maggie
    - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
    - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
-   - C. Runtime link: http://104.63.255.249:8081/planetarium
+   - C. Runtime link: http://lobstersmuseum.cf/planetarium
 
 
 - COLLEGE BOARD REQUIREMENTS
