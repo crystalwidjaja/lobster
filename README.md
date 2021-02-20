@@ -43,7 +43,6 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - C. Runtime link: http://104.63.255.249:8081/planetarium
 
 # Completed Tickets/Goals for Team (Week 2/15/2021)
-**Code review is incorporated the following ticket overviews**
  - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120) by Sriya
    - A. The planetarium exhibit will include a panorama of solar system. It will also have “infospots” (located on top of each Jupiter, for example) that the user can click on. Clicking on “info spots” will also shows information from database about planets.
     - NOTE: The infospot feature is still in progress. Currently, Jupiter is the only working infospot and will give an alert when clicked on, but still needs a link to the database. My goal is to complete all infospots for next week.
@@ -53,15 +52,10 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The music exhibit will be split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The code will primarily use HTML and CSS. The images will be buttons that can play various decade themed playlists
    - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
    - C. Runtime link: http://lobstersmuseum.cf/music
- - [Carousel](https://github.com/crystalwidjaja/lobster/projects/2#card-53783149) by Ridhima
-   - A. The carousel will be an image slider for the botany exhibit (using plants for images). The code will use mainly HTML and CSS with a little bit of JS for the radio button. The carousel is clickable to allow the user to move to the next image.
-   - B. Code link: see [botany.py](botany.py) and [botany.html](templates/botany.html)
-   - C. Runtime link: http://104.63.255.249:8081/
- - [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136) by Maggie
-   - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
-   - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
-   - C. Runtime link: http://104.63.255.249:8081/planetarium
-
+- [Art Exhibit Backend](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Ridhima
+   - A. The art exhibit presents the information for each of the art pieces and is immediately available when you hover over the art piece. This code primarily uses backend python. 
+   - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photgraphy.html)
+   - C. Runtime Link: http://lobstersmuseum.cf/art
 - COLLEGE BOARD REQUIREMENTS
   - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
   - LISTS: One way we use lists is through extracting the data from a source through a REST API. Evidence in [botany.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/botany.py#L25-#L52)
