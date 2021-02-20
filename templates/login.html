@@ -30,8 +30,8 @@
     body{
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
-            background: #34495e;
+            font-family: serif;
+            background: #505050;
         }
         .container{
             width: 300px;
@@ -44,17 +44,17 @@
             text-align: center;
         }
         .container h1{
-            color: white;
+            color: GoldenRod;
             text-transform: uppercase;
             font-weight: 500;
         }
         .container input[type = "text"], .container input[type = "password"]{
             border: 0;
-            background: none;
+            background: ##6682828;
             display: block;
             margin: 20px auto;
             text-align: center;
-            border: 2px solid #3498db;
+            border: 2px solid GoldenRod;
             padding: 14px 10px;
             width: 200px;
             outline: none;
@@ -64,21 +64,22 @@
         }
         .container input[type = "text"]:focus,.container input[type = "password"]:focus{
             width: 280px;
-            border-color: #2ecc71;
+            border-color: GoldenRod;
        }
        .container input[type = "submit"]{
             border: 0;
-            background: none;
+            background: #6682828;
             display: block;
             margin: 20px auto;
             text-align: center;
             border-radius: 24px;
-            border: 2px solid #2ecc71;
+            border: 2px solid GoldenRod;
             padding: 14px 40px;
             outline: none;
             color: white;
             transition: 0.25s;
             cursor: pointer;
+            color: #000000;
        }
        .container input[type = "submit"]:hover{
             background: #23cc71;
@@ -91,7 +92,7 @@
     <h1>login</h1>
     <br>
     <form action="/signin" method="POST">
-        <input type="text" placeholder="Username" name="username" >
+        <input type="text" placeholder="Username" name="username">
         <input type="password" placeholder="Password" name="password">
         <input type="submit" name= "" value="Login">
     </form>
