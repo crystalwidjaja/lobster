@@ -55,19 +55,20 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - C. Runtime link: http://lobstersmuseum.cf/music
 - [Art Exhibit Backend](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Ridhima
    - A. The art exhibit presents the information for each of the art pieces and is immediately available when you hover over the art piece. This code primarily uses backend python. 
-   - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photgraphy.html)
+   - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
    - C. Runtime Link: http://lobstersmuseum.cf/art
-- [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136) by Maggie
-   - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
-   - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
-   - C. Runtime link: http://lobstersmuseum.cf/planetarium
+- [Login (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-55341819) by Maggie
+   - A. The login page frontend now matches with the theme colors and layout of the museum webpage. Now, the css is revised and has different colors and font.
+   - NOTE: The search bar feature is still in progress. Currently, the css is finished for the search bar, but I will continue to work on it to perform a search successfully by next week.
+   - B. Code link: see [login.html](templates/login.html) and [login.html](login.html)
+   - C. Runtime link: http://lobstersmuseum.cf/login
 
 - CrossOver Suggestions from other team (Sushi): 
-  - 1) For the login page, make sure not to display the output information on that same page. Make sure you hide that information once it is stored within the database. 
+  - 1) For the landing page, make sure not to display the output information on that same page. Make sure you hide that information once it is stored within the database. 
   - 2) Make sure the frontend for the login and sign in page have the same theme style that as the museum exhibit colors because they are very different. (presentation wise)
 - Crossover Revisions: 
   - 1) For the login page the color scheme is now corrected and fits in with the museum scheme colors. 
-  - 2) For the login page there is no longer any information outputed within the same information. All the information is stored within the database and hidden from the users. 
+  - 2) For the landing page, there is no longer any information outputed within the same information. All the information is stored within the database and hidden from the users. 
 
 - COLLEGE BOARD REQUIREMENTS
   - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
