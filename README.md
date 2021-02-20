@@ -43,14 +43,38 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - C. Runtime link: http://104.63.255.249:8081/planetarium
 
 # Completed Tickets/Goals for Team (Week 2/15/2021)
- - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783120)
-   - A. The planetarium exhibit will include a 3D panorama of solar system that has interactive to drag around and explore. It will also have “infospots” that the user can click on to bring a certain planet to the center of attention. Clicking on “info spots” will also shows information from database about planets.
+### CODE REVIEW IS INCORPORATED IN THE FOLLOWING TICKET OVERVIEWS
+ - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya
+   - A. The planetarium exhibit will include a panorama of solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) that the user can click on. Clicking on “info spots” will also shows information from database about planets.
+    - NOTE: The infospot feature is still in progress. Currently, Jupiter is the only working infospot and will give an alert when clicked on, but still needs a link to the database. My goal is to complete all infospots for next week.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
-   - C. Runtime link: http://104.63.255.249:8081/planetarium
- - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483)
+   - C. Runtime link: http://lobstersmuseum.cf/planetarium
+ - [Music Exhibit (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483) by Crystal
    - A. The music exhibit will be split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The code will primarily use HTML and CSS. The images will be buttons that can play various decade themed playlists
    - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
-   - C. Runtime link: http://104.63.255.249:8081/music
+   - C. Runtime link: http://lobstersmuseum.cf/music
+- [Art Exhibit Backend](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Ridhima
+   - A. The art exhibit presents the information for each of the art pieces and is immediately available when you hover over the art piece. This code primarily uses backend python. 
+   - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photgraphy.html)
+   - C. Runtime Link: http://lobstersmuseum.cf/art
+- [Planetarium (Backend)](https://github.com/crystalwidjaja/lobster/projects/2#card-53783136) by Maggie
+   - A. The planetarium backend will be include an API from the web to get content for the page. This content will include information about planets. The backend will utilize python and will link to the frontend through the planetarium exhibit.
+   - B. Code link: see [planetarium.html](templates/planetarium.html) and [planetarium.py](planetarium.py)
+   - C. Runtime link: http://lobstersmuseum.cf/planetarium
+
+- CrossOver Suggestions from other team (Sushi): 
+  - 1) For the login page, make sure not to display the output information on that same page. Make sure you hide that information once it is stored within the database. 
+  - 2) Make sure the frontend for the login and sign in page have the same theme style that as the museum exhibit colors because they are very different. (presentation wise)
+- Crossover Revisions: 
+  - 1) For the login page the color scheme is now corrected and fits in with the museum scheme colors. 
+  - 2) For the login page there is no longer any information outputed within the same information. All the information is stored within the database and hidden from the users. 
+
+- COLLEGE BOARD REQUIREMENTS
+  - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
+  - LISTS: One way we use lists is through extracting the data from a source through a REST API. Evidence in [botany.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/botany.py#L25-#L52)
+  - PROCEDURES: We are using these procedures mainly through our main.py which contains most of the routes to our websites. Evidence in [main.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/main.py#L122-#L211)
+  - ALGORITHMS: We use algorithms to create user accounts and sessions. Additionally, the algorithms are used to direct the user throughout the pages via conditional statements. Evidence in [main.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/main.py#L78-#L118)
+  - OUTPUTS: Our Favorites page creates a customized page of exhibits based on the user input. For example, if the user chooses the art and planetarium exhibits when they make an account, their Favorites page will display these 2 exhibits. Evidence in [favorites.html](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/templates/favorites.html#L107-#L139)
 
 # Key Features 
  - Exhibits
