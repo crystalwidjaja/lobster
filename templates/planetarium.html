@@ -91,9 +91,66 @@
 
 <div class="pano-image"></div>
 
-<div class="img-box">
+<!-- <div class="img-box">
     <iframe width="600px" height="360px" frameborder="0" src="https://momento360.com/e/u/70bd2266b7e04e9283ba770047ca25ee?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium"></iframe>
-</div>
+</div> -->
 
+<h4 onclick="showCoords(event)">(Coordinate finder)</h4>
+
+<p><strong>Tip:</strong> Try to click different places in the heading.</p>
+
+<p id="demo"></p>
+
+<script>
+    function showCoords(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = "X coords: " + x + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coords;
+    }
+</script>
+
+<p/><img onclick="showCoords(event)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Solar_system_scale_edit.jpg/1200px-Solar_system_scale_edit.jpg" alt="Solar system scale edit.jpg" usemap="#solar"></a>
+    <map name="solar">
+        <area shape="rect" coords="34,44,270,350" alt="Mercury" onclick="myMerFunction()">
+        <area shape="rect" coords="290,172,333,250" alt="Venus" onclick="myVenFunction()" href="test2.htm">
+        <area shape="rect" coords="225,200,265,330" alt="Earth" onclick="myEarFunction()" href="test.htm">
+        <area shape="rect" coords="34,44,270,350" alt="Mars" onclick="myMarsFunction()">
+        <area shape="rect" coords="400,150,600,375" alt="Jupiter" onclick="myJupFunction()">
+        <area shape="rect" coords="34,44,270,350" alt="Saturn" onclick="mySatFunction()">
+        <area shape="rect" coords="34,44,270,350" alt="Uranus" onclick="myUraFunction()">
+        <area shape="rect" coords="34,44,270,350" alt="Neptune" onclick="myNepFunction()">
+        <area shape="rect" coords="34,44,270,350" alt="Pluto" onclick="myPluFunction()">
+    </map>
+
+<script>
+    function myMerFunction() {
+        alert("You clicked Mercury!");
+    }
+    function myVenFunction() {
+        alert("You clicked Venus!");
+    }
+    function myEarFunction() {
+        alert("You clicked Earth!");
+    }
+    function myMarsFunction() {
+        alert("You clicked Mars!");
+    }
+    function myJupFunction() {
+        alert("You clicked Jupiter!");
+    }
+    function mySatFunction() {
+        alert("You clicked Saturn!");
+    }
+    function myUraFunction() {
+        alert("You clicked Uranus!");
+    }
+    function myNepFunction() {
+        alert("You clicked Neptune!");
+    }
+    function myPluFunction() {
+        alert("You clicked Pluto!");
+    }
+</script>
 </body>
 </html>
