@@ -80,7 +80,73 @@
       margin: 150px auto;
       text-align: center;
   }
-}
+ .image-description{
+     position:absolute;
+     background: white;
+     color: #fff;
+     visibility: hidden;
+     opacity: 0;
+     color:black;
+ }
+   }
+    /* Popup box BEGIN */
+    .hover_bkgr_fricc{
+        background:rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height:100%;
+        position:fixed;
+        text-align:center;
+        top:0;
+        width:100%;
+        z-index:10000;
+    }
+    .hover_bkgr_fricc .helper{
+        display:inline-block;
+        height:100%;
+        vertical-align:middle;
+    }
+    .hover_bkgr_fricc > div {
+        background-color: #fff;
+        box-shadow: 10px 10px 60px #555;
+        display: inline-block;
+        height: auto;
+        max-width: 551px;
+        min-height: 100px;
+        vertical-align: middle;
+        width: 60%;
+        position: relative;
+        border-radius: 8px;
+        padding: 15px 5%;
+    }
+    .popupCloseButton {
+        background-color: #fff;
+        border: 3px solid #999;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        font-family: arial;
+        font-weight: bold;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 25px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    .popupCloseButton:hover {
+        background-color: #ccc;
+    }
+    .trigger_popup_fricc {
+        cursor: pointer;
+        font-size: 20px;
+        margin: 20px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    /* Popup box END */
     </style>
 </head>
 <body>
@@ -95,32 +161,17 @@
     <iframe width="600px" height="360px" frameborder="0" src="https://momento360.com/e/u/70bd2266b7e04e9283ba770047ca25ee?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium"></iframe>
 </div> -->
 
-<h4 onclick="showCoords(event)">(Coordinate finder)</h4>
-
-<p><strong>Tip:</strong> Try to click different places in the heading.</p>
-
-<p id="demo"></p>
-
-<script>
-    function showCoords(event) {
-        var x = event.clientX;
-        var y = event.clientY;
-        var coords = "X coords: " + x + ", Y coords: " + y;
-        document.getElementById("demo").innerHTML = coords;
-    }
-</script>
-
-<p/><img onclick="showCoords(event)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Solar_system_scale_edit.jpg/1200px-Solar_system_scale_edit.jpg" alt="Solar system scale edit.jpg" usemap="#solar"></a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Solar_system_scale_edit.jpg/1200px-Solar_system_scale_edit.jpg" alt="Solar system scale edit.jpg" usemap="#solar"></a>
     <map name="solar">
-        <area shape="rect" coords="34,44,270,350" alt="Mercury" onclick="myMerFunction()">
-        <area shape="rect" coords="290,172,333,250" alt="Venus" onclick="myVenFunction()" href="test2.htm">
-        <area shape="rect" coords="225,200,265,330" alt="Earth" onclick="myEarFunction()" href="test.htm">
-        <area shape="rect" coords="34,44,270,350" alt="Mars" onclick="myMarsFunction()">
+        <area shape="rect" coords="100,250,125,300" alt="Mercury" onclick="myMerFunction()">
+        <area shape="rect" coords="175,250,200,300" alt="Venus" onclick="myVenFunction()">
+        <area shape="rect" coords="250,200,290,330" alt="Earth" onclick="myEarFunction()">
+        <area shape="rect" coords="325,250,350,300" alt="Mars" onclick="myMarsFunction()">
         <area shape="rect" coords="400,150,600,375" alt="Jupiter" onclick="myJupFunction()">
-        <area shape="rect" coords="34,44,270,350" alt="Saturn" onclick="mySatFunction()">
-        <area shape="rect" coords="34,44,270,350" alt="Uranus" onclick="myUraFunction()">
-        <area shape="rect" coords="34,44,270,350" alt="Neptune" onclick="myNepFunction()">
-        <area shape="rect" coords="34,44,270,350" alt="Pluto" onclick="myPluFunction()">
+        <area shape="rect" coords="625,100,875,450" alt="Saturn" onclick="mySatFunction()">
+        <area shape="rect" coords="880,200,980,350" alt="Uranus" onclick="myUraFunction()">
+        <area shape="rect" coords="1005,200,1105,350" alt="Neptune" onclick="myNepFunction()">
+        <area shape="rect" coords="1145,200,1175,350" alt="Pluto" onclick="myPluFunction()">
     </map>
 
 <script>
