@@ -30,7 +30,6 @@ class User(db.Model):
     age = db.Column(db.Integer, unique=False, nullable=True)
     dob = db.Column(db.DateTime, unique=False, nullable=True)
     botany = db.Column(db.Integer, unique=False, nullable=True)
-    history = db.Column(db.Integer, unique=False, nullable=True)
     photography = db.Column(db.Integer, unique=False, nullable=True)
     music = db.Column(db.Integer, unique=False, nullable=True)
     space = db.Column(db.Integer, unique=False, nullable=True)
@@ -86,7 +85,7 @@ def landing_page():
                         firstname=request.form.get("firstName"), lastname=request.form.get("lastName"),
                         email_address=request.form.get("email_address"), gender=request.form.get("gender"),
                         age=request.form.get("age"), botany=request.form.get("botany"),
-                        photography=request.form.get("art"), music=request.form.get("music"),
+                        photography=request.form.get("photography"), music=request.form.get("music"),
                         space=request.form.get("space"))
             db.session.add(user)
             db.session.commit()
