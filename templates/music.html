@@ -77,13 +77,18 @@ body {background-color: black;}
 <body>
 {% include 'nav.html' %}
 
+function playMusic(){
+var music = new Audio('1920s');
+music.play();
+}
 
 <h1>Music</h1>
-<input type="image" src="/static/phonograph.png" name="submit" width="230" height="300" alt="submit"/>
-<input type="image" src="/static/record.png" name="submit" width="300" height="200" alt="submit"/>
-<input type="image" src="/static/jukebox.png" name="submit" width="300" height="300" alt="submit"/>
-<input type="image" src="/static/radio.png" name="submit" width="300" height="250" alt="submit"/>
-<input type="image" src="/static/ipod.png" name="submit" width="250" height="300" alt="submit"/>
+<input type="image" onclick="playMusic()" src="/static/phonograph.png" name="submit" width="230" height="300" alt="1920s"/>
+<input type="image" onclick="playMusic()" src="/static/record.png" name="submit" width="300" height="200" alt="1940s"/>
+<input type="image" onclick="playMusic()" src="/static/jukebox.png" name="submit" width="300" height="300" alt="1960s"/>
+<input type="image" onclick="playMusic()" src="/static/radio.png" name="submit" width="300" height="250" alt="1980s"/>
+<input type="image" onclick="playMusic()" src="/static/ipod.png" name="submit" width="250" height="300" alt="200s"/>
+
 
 </body>
 </html>
