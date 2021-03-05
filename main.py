@@ -60,10 +60,32 @@ class Botany(db.Model):
     def __repr__(self):
         return '<Botany %r>' % self.commonName
 
+class Search(db.Model):
+    searchid = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    exhibit = db.Column(db.String(255), unique=False, nullable=False)
+    link = db.Column(db.String(255), unique=False, nullable=False)
+
+    def __repr__(self):
+        return '<Search %r>' % self.searchid
 
 ''' table creation '''
 db.create_all()
 
+search = Search(exhibit="botany", link="/botany")
+search1 = Search(exhibit="my favorites", link="/favorites")
+search2 = Search(exhibit="all galleries", link="/all_galleries")
+search3 = Search(exhibit="music", link="/music")
+search4 = Search(exhibit="art", link="/photography")
+search5 = Search(exhibit="photography", link="/photography")
+search6 = Search(exhibit="about us", link="/about_us")
+db.session.add(search)
+db.session.add(search1)
+db.session.add(search2)
+db.session.add(search3)
+db.session.add(search4)
+db.session.add(search5)
+db.session.add(search6)
+db.session.commit()
 
 # global session variable
 @app.before_request
@@ -198,6 +220,22 @@ def easteregg_route():
     if g.user:
         return render_template("easteregg.html", user=session['user'])
     return redirect(url_for('landing_page'))
+
+@app.route('/search_results', methods=["GET", "POST"])
+def search_results():
+    # function use Flask import (Jinja) to render an HTML template
+    searchkey = None
+    selectedsearch = None
+    if g.user:
+        if request.form:
+            searchkey = request.form.get("search")
+            selectedsearch = Search.query.filter_by(exhibit=searchkey).first()
+            return render_template("searchresults.html", user=session['user'], data=selectedsearch)
+            #error=selectedsearch
+        else:
+            error = "Invalid Input. Please try again."
+    #return redirect(url_for('landing_page'))
+    return render_template("searchresults.html", error=error)
 
 if __name__ == "__main__":
     app.run(debug=True, port='80', host='127.0.0.1')
