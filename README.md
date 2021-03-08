@@ -18,9 +18,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
          	``` function showPlanetInfo(e){
 			let planet = e.target.getAttribute('alt') let showModal = true;
          	
-		``` case 'Mercury':
-			msg = 'Mercury is the closest planet to the Sun...';
-			break;
+			``` case 'Mercury':
+				msg = 'Mercury is the closest planet to the Sun...';
+				break;
        - There is also a close button to close the modal.
          - ``` document.querySelector('.popupCloseButton').addEventListener('click', function(){ modal.style.display = 'none'; ```
    - C. Runtime link: http://lobstersmuseum.cf/planetarium
