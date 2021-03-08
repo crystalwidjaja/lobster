@@ -29,7 +29,8 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
        - Sriya's Frontend:
          - I used CSS to create a side scroll:
-```      .scrolling-pics {
+ ```
+     .scrolling-pics {
         overflow-x:scroll;
         overflow-y:hidden;
         white-space:nowrap;
@@ -41,7 +42,9 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 	        color:#ffffff;
             border:5px;
             padding:20px;
-            margin:20px;} ```
+            margin:20px;
+        }
+```
          - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
            - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
            - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
