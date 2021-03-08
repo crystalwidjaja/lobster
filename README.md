@@ -55,7 +55,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 				margin:20px;
 			 }
 
-    			.box-3:hover .image-description{
+    		.box-3:hover .image-description{
         			visibility:visible;
         			opacity:1;
     			} 
