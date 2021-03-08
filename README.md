@@ -32,7 +32,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information. This code primarily uses backend python. 
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
        - Sriya's Frontend:
-         - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
+         - I used CSS to create 3 classes: image-description, hover-box, and box-3.
            	```     
 			.image-description{
 				position:absolute;
@@ -59,7 +59,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
         			visibility:visible;
         			opacity:1;
     			} 
-         - There is also a close button to close the modal.
+         - I call the 3 classes above by placing the image in box-3 to give it a frame, and image-description & hover-box to place the information.
            	``` 
 			<div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
            			<div class="image-description hover-box">
