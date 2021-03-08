@@ -12,7 +12,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - [Planetarium Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya and Maggie
    - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) that the user can click on. Clicking on “info spots” will show information about each of the planets.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
-     - Sriya:
+     - Sriya's Frontend:
        - I used an image map with coordinates to allow the user to click infospot on each planet. For example, Mercury used ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
        - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
          - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
@@ -27,6 +27,26 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 - [Art Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Sriya and Ridhima
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information. This code primarily uses backend python. 
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
+       - Sriya's Frontend:
+         - I used CSS to create a side scroll:
+```      .scrolling-pics {
+        overflow-x:scroll;
+        overflow-y:hidden;
+        white-space:nowrap;
+
+        .card {
+            overflow-x:scroll;
+            display:inline-block;
+            background-color:#333333;
+	        color:#ffffff;
+            border:5px;
+            padding:20px;
+            margin:20px;} ```
+         - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
+           - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
+           - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
+         - There is also a close button to close the modal.
+           - ``` document.querySelector('.popupCloseButton').addEventListener('click', function(){ modal.style.display = 'none'; ```
    - C. Runtime Link: http://lobstersmuseum.cf/art
 - [Login](https://github.com/crystalwidjaja/lobster/projects/2#card-55341819) by Maggie and Ridhima
    - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password. The login page frontend uses CSS to match with the theme colors, font, and layout of the museum webpage.
