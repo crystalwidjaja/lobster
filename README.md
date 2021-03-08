@@ -15,7 +15,8 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
      - Sriya:
        - I used an image map with coordinates to allow the user to click infospot on each planet. For example, Mercury used ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
        - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
-         - ``` function showPlanetInfo(e){  let planet = e.target.getAttribute('alt') let showModal = true; ```
+         - ``` function showPlanetInfo(e){
+                 let planet = e.target.getAttribute('alt') let showModal = true; ```
          - ``` case 'Mercury':
                 msg = 'Mercury is the closest planet to the Sun...';
                 break; ```
