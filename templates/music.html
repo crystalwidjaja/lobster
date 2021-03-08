@@ -78,7 +78,27 @@ body {background-color: black;}
 {% include 'nav.html' %}
 
 function playMusic(){
-var music = new Audio('songs.csv');
+var music = new Audio('/static/1920s.mp3');
+music.play();
+}
+
+function playMusic(){
+var music = new Audio('/static/1940s.mp3');
+music.play();
+}
+
+function playMusic(){
+var music = new Audio('/static/1960s.mp3');
+music.play();
+}
+
+function playMusic(){
+var music = new Audio('/static/1980s.mp3');
+music.play();
+}
+
+function playMusic(){
+var music = new Audio('/static/2000s.mp3');
 music.play();
 }
 
@@ -87,7 +107,7 @@ music.play();
 <input type="image" onclick="playMusic()" src="/static/record.png" name="submit" width="300" height="200" alt="1940s"/>
 <input type="image" onclick="playMusic()" src="/static/jukebox.png" name="submit" width="300" height="300" alt="1960s"/>
 <input type="image" onclick="playMusic()" src="/static/radio.png" name="submit" width="300" height="250" alt="1980s"/>
-<input type="image" onclick="playMusic()" src="/static/ipod.png" name="submit" width="250" height="300" alt="200s"/>
+<input type="image" onclick="playMusic()" src="/static/ipod.png" name="submit" width="250" height="300" alt="2000s"/>
 
 
 </body>
