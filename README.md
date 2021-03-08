@@ -68,7 +68,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 					<p>Frederic Edwin Church (American, 1826-1900)</p>
 				</div>
 			</div>
-	 - I used CSS to create a side scroll:
+	 - I used CSS to create a side scroll class. The most important of this class is the "overflow-x:scroll" and "display:inline-block" because they let the art pieces go beyond the regular page dimensions and keep them in line.
 		 ```   .scrolling-pics {
 			overflow-x:scroll;
 			overflow-y:hidden;
