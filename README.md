@@ -15,14 +15,18 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
      - Sriya's Frontend:
        - I used an image map with coordinates to allow the user to click infospot on each planet. For example, Mercury used ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
        - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
-         	``` function showPlanetInfo(e){
-			let planet = e.target.getAttribute('alt') let showModal = true;
-         	
-			case 'Mercury':
-				msg = 'Mercury is the closest planet to the Sun...';
-				break;
+         	``` 
+			function showPlanetInfo(e){
+				let planet = e.target.getAttribute('alt') let showModal = true;
+         		
+			switch(planet){
+				case 'Mercury':
+					msg = 'Mercury is the closest planet to the Sun...';
+					break;
        - There is also a close button to close the modal.
-         - ``` document.querySelector('.popupCloseButton').addEventListener('click', function(){ modal.style.display = 'none'; ```
+         	```
+			document.querySelector('.popupCloseButton').addEventListener('click', function(){
+         			modal.style.display = 'none';
    - C. Runtime link: http://lobstersmuseum.cf/planetarium
  - [Music Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483) by Crystal
    - A. The music exhibit is split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The images will be buttons that can play various decade themed playlists. The code will primarily use HTML and CSS.
@@ -58,7 +62,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
     		.box-3:hover .image-description{
         			visibility:visible;
         			opacity:1;
-    			} 
+    		} 
          - I call the 3 classes above by placing the image in box-3 to give it a frame, and image-description & hover-box to place the information.
            	``` 
 			<div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
