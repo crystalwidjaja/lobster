@@ -18,7 +18,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
          	``` function showPlanetInfo(e){
 			let planet = e.target.getAttribute('alt') let showModal = true;
          	
-			``` case 'Mercury':
+			case 'Mercury':
 				msg = 'Mercury is the closest planet to the Sun...';
 				break;
        - There is also a close button to close the modal.
@@ -33,8 +33,31 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
        - Sriya's Frontend:
          - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
-           - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
-           - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
+           	```     .image-description{
+				position:absolute;
+				background: white;
+				color: #fff;
+				visibility: hidden;
+				opacity: 0;
+				color:black;
+			}
+
+			 .hover-box{
+				display:bottom;
+				background-color:grey;
+				color:#ffffff;
+
+				padding:20px;
+
+				float:bottom;
+
+				margin:20px;
+			 }
+
+    			.box-3:hover .image-description{
+        			visibility:visible;
+        			opacity:1;
+    			} ```
          - There is also a close button to close the modal.
            	``` 
 			<div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
