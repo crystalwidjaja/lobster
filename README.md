@@ -28,9 +28,13 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information. This code primarily uses backend python. 
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
        - Sriya's Frontend:
-         - I used CSS to create a side scroll:
-	 	```
-		     .scrolling-pics {
+         - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
+           - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
+           - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
+         - There is also a close button to close the modal.
+           - ``` <div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;"> <div class="image-description hover-box"><h3>Twilight in the Wilderness</h3><p>America, 19th century - 1860</p><p>Frederic Edwin Church (American, 1826-1900)</p></div></div> ```
+	 - I used CSS to create a side scroll:
+		 ```   .scrolling-pics {
 			overflow-x:scroll;
 			overflow-y:hidden;
 			white-space:nowrap;
@@ -43,11 +47,6 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 			    border:5px;
 			    padding:20px;
 			    margin:20px; }```
-         - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
-           - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
-           - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
-         - There is also a close button to close the modal.
-           - ``` document.querySelector('.popupCloseButton').addEventListener('click', function(){ modal.style.display = 'none'; ```
    - C. Runtime Link: http://lobstersmuseum.cf/art
 - [Login](https://github.com/crystalwidjaja/lobster/projects/2#card-55341819) by Maggie and Ridhima
    - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password. The login page frontend uses CSS to match with the theme colors, font, and layout of the museum webpage.
