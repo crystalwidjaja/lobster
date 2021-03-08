@@ -12,7 +12,8 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - [Planetarium Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya and Maggie
    - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) that the user can click on. Clicking on “info spots” will show information about each of the planets.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
-     - I used
+     - Sriya: I used an image map with coordinates to allow the user to click infospot on each planet.
+     - ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
    - C. Runtime link: http://lobstersmuseum.cf/planetarium
  - [Music Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483) by Crystal
    - A. The music exhibit is split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The images will be buttons that can play various decade themed playlists. The code will primarily use HTML and CSS.
