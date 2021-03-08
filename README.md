@@ -10,7 +10,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
 
 # Finals Week (Technicals Overview)
  - [Planetarium Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya and Maggie
-   - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L113-#L153) that the user can click on. Clicking on “info spots” will show information about each of the planets.
+   - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L155-#L166) that the user can click on. Clicking on “info spots” will show information about each of the planets.
    - B. Code link: see [planetarium.html](templates/planetarium.html)
      - Sriya's Frontend:
        - I used an image map with coordinates to allow the user to click infospot on each planet. For example, Mercury used ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
@@ -29,22 +29,22 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
        - Sriya's Frontend:
          - I used CSS to create a side scroll:
- ```
-     .scrolling-pics {
-        overflow-x:scroll;
-        overflow-y:hidden;
-        white-space:nowrap;
+	 ```
+	     .scrolling-pics {
+		overflow-x:scroll;
+		overflow-y:hidden;
+		white-space:nowrap;
 
-        .card {
-            overflow-x:scroll;
-            display:inline-block;
-            background-color:#333333;
-	        color:#ffffff;
-            border:5px;
-            padding:20px;
-            margin:20px;
-        }
-```
+		.card {
+		    overflow-x:scroll;
+		    display:inline-block;
+		    background-color:#333333;
+			color:#ffffff;
+		    border:5px;
+		    padding:20px;
+		    margin:20px;
+		}
+	```
          - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
            - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
            - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
