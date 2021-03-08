@@ -32,13 +32,14 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
            - ``` function showPlanetInfo(e){ let planet = e.target.getAttribute('alt') let showModal = true; ```
            - ``` case 'Mercury': msg = 'Mercury is the closest planet to the Sun...'; break; ```
          - There is also a close button to close the modal.
-           	``` <div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
-           		<div class="image-description hover-box">
-				<h3>Twilight in the Wilderness</h3>
-				<p>America, 19th century - 1860</p>
-				<p>Frederic Edwin Church (American, 1826-1900)</p>
+           	``` 
+			<div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
+           			<div class="image-description hover-box">
+					<h3>Twilight in the Wilderness</h3>
+					<p>America, 19th century - 1860</p>
+					<p>Frederic Edwin Church (American, 1826-1900)</p>
+				</div>
 			</div>
-			</div> ```
 	 - I used CSS to create a side scroll:
 		 ```   .scrolling-pics {
 			overflow-x:scroll;
