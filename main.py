@@ -48,7 +48,6 @@ class ArtInfo(db.Model):
     def __repr__(self):
         return '<ArtInfo %r>' % self.title
 
-
 class Botany(db.Model):
     botanyId = db.Column(db.Integer, primary_key=True, autoincrement=True)
     commonName = db.Column(db.String, nullable=False)
