@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
 
 
@@ -146,13 +147,10 @@
 {% include 'nav.html' %}
 
 <h1>Planetarium</h1>
-<p>360 pano of space</p>
+<p>An informational panoramic of our solar system.</p>
+<p>credits to https://space-facts.com/ and wikipedia</p>
 
 <div class="pano-image"></div>
-
-<!-- <div class="img-box">
-    <iframe width="600px" height="360px" frameborder="0" src="https://momento360.com/e/u/70bd2266b7e04e9283ba770047ca25ee?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium"></iframe>
-</div> -->
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Solar_system_scale_edit.jpg/1200px-Solar_system_scale_edit.jpg" alt="Solar system scale edit.jpg" usemap="#solar"></a>
     <map name="solar">
@@ -176,6 +174,19 @@
 </div>
 
 <script>
+    /*function processdata() {
+        $.ajax({
+            url: 'https://api.le-systeme-solaire.net/rest/bodies/',
+            type: 'GET',
+            success: function (response) {
+                console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+            }
+        });
+    }
+    processdata(); */
 
     //this script is changed. Please use this one.
     let map = document.querySelector('map');
@@ -204,40 +215,40 @@
 
         switch(planet){
             case 'Mercury':
-                msg = 'You could put some cool stuff in here about Mercury';
+                msg = 'Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis and up until 1965 it was thought that the same side of Mercury constantly faced the Sun. Thirteen times a century Mercury can be observed from the Earth passing across the face of the Sun in an event called a transit, the next will occur on the 9th May 2016.';
                 //reassigned the value of msg to allow for customization
                 break; //break keeps the conditions separate.
 
             case 'Venus':
-                msg = 'You could put some cool stuff in here about Venus';
+                msg = 'Venus does not have any moons or rings. Venus is nearly as big as the Earth with a diameter of 12,104 km. Venus is thought to be made up of a central iron core, rocky mantle and silicate crust. A day on the surface of Venus (solar day) would appear to take 117 Earth days. A year on Venus takes 225 Earth days. The surface temperature on Venus can reach 471 °C.';
                 break;
 
             case 'Earth':
-                msg = 'You could put some cool stuff in here about Earth';
+                msg = 'Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.';
                 break;
 
             case 'Mars':
-                msg = 'You could put some cool stuff in here about Mars';
+                msg = 'Mars is the fourth planet from the Sun and is the second smallest planet in the solar system. Named after the Roman god of war, Mars is also often described as the “Red Planet” due to its reddish appearance. Mars is a terrestrial planet with a thin atmosphere composed primarily of carbon dioxide.';
                 break;
 
             case 'Jupiter':
-                msg = 'You could put some cool stuff in here about Jupiter';
+                msg = 'Jupiter is the largest planet in the solar system and is the fifth planet out from the Sun. It is two and a half times more massive than all the other planets in the solar system combined. It is made primarily of gases and is therefore known as a “gas giant”.';
                 break;
 
             case 'Saturn':
-                msg = 'You could put some cool stuff in here about Saturn';
+                msg = 'Best known for its fabulous ring system, Saturn is the sixth planet from the Sun and the second largest in our solar system. Like Jupiter, Saturn is a gas giant and is composed of similar gasses including hydrogen, helium and methane.';
                 break;
 
             case 'Uranus':
-                msg = 'You could put some cool stuff in here about Uranus';
+                msg = 'Uranus is the seventh planet from the Sun. It’s not visible to the naked eye, and became the first planet discovered with the use of a telescope. Uranus is tipped over on its side with an axial tilt of 98 degrees. It is often described as “rolling around the Sun on its side.”';
                 break;
 
             case 'Neptune':
-                msg = 'You could put some cool stuff in here about Neptune';
+                msg = 'Neptune is the eighth planet from the Sun, making it the most distant in the solar system. This gas giant may have formed much closer to the Sun in the early solar system history before migrating out to its current position.';
                 break;
 
             case 'Pluto':
-                msg = 'You could put some cool stuff in here about Pluto';
+                msg = 'Pluto is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first and the largest Kuiper belt object to be discovered. After Pluto was discovered in 1930, it was declared to be the ninth planet from the Sun.';
                 break;
 
             default:

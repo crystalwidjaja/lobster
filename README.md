@@ -8,6 +8,110 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Username: test
  - Password: test
 
+# Finals Week (Technicals Overview)
+ - [Planetarium Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya and Maggie
+   - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L155-#L166) that the user can click on. Clicking on “info spots” will show information about each of the planets.
+   - B. Code link: see [planetarium.html](templates/planetarium.html)
+     - Sriya's Frontend:
+       - I used an image map with coordinates to allow the user to click infospot on each planet. For example, Mercury used ```  <area shape="rect" coords="100,250,125,300" alt="Mercury"> ```
+       - I used a JS event to figure out which planet is being clicked, then display text on information about the planet.
+         	``` 
+			function showPlanetInfo(e){
+				let planet = e.target.getAttribute('alt') let showModal = true;
+         		
+			switch(planet){
+				case 'Mercury':
+					msg = 'Mercury is the closest planet to the Sun...';
+					break;
+       - There is also a close button to close the modal.
+         	```
+			document.querySelector('.popupCloseButton').addEventListener('click', function(){
+         			modal.style.display = 'none';
+   - C. Runtime link: http://lobstersmuseum.cf/planetarium
+ - [Music Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483) by Crystal
+   - A. The music exhibit is split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The images will be buttons that can play various decade themed playlists. The code will primarily use HTML and CSS.
+   - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
+   - C. Runtime link: http://lobstersmuseum.cf/music
+- [Art Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Sriya and Ridhima
+   - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information. This code primarily uses backend python. 
+   - B. Code link: see [artpiece.py](artpiece.py), [photography.html](photography.html)
+       - Sriya's Frontend:
+         - I used CSS to create 3 classes: image-description, hover-box, and box-3.
+           	```     
+			.image-description{
+				position:absolute;
+				background: white;
+				color: #fff;
+				visibility: hidden;
+				opacity: 0;
+				color:black;
+			}
+
+			 .hover-box{
+				display:bottom;
+				background-color:grey;
+				color:#ffffff;
+
+				padding:20px;
+
+				float:bottom;
+
+				margin:20px;
+			 }
+
+    		.box-3:hover .image-description{
+        			visibility:visible;
+        			opacity:1;
+    		} 
+         - I call the 3 classes above by placing the image in box-3 to give it a frame, and image-description & hover-box to place the information.
+           	``` 
+			<div class="box-3"><img src="https://pic...jpg" alt="Twilight in the Wilderness" style="width:200px;height:250px;">
+           			<div class="image-description hover-box">
+					<h3>Twilight in the Wilderness</h3>
+					<p>America, 19th century - 1860</p>
+					<p>Frederic Edwin Church (American, 1826-1900)</p>
+				</div>
+			</div>
+	 - I used CSS to create a side scroll class. The most important of this class is the "overflow-x:scroll" and "display:inline-block" because they let the art pieces go beyond the regular page dimensions and keep them in line.
+		 ```   
+		 .scrolling-pics {
+				overflow-x:scroll;
+				overflow-y:hidden;
+				white-space:nowrap;
+
+		.card {
+			    overflow-x:scroll;
+			    display:inline-block;
+			    background-color:#333333;
+				color:#ffffff;
+			    border:5px;
+			    padding:20px;
+			    margin:20px; }
+   - C. Runtime Link: http://lobstersmuseum.cf/art
+- [Login](https://github.com/crystalwidjaja/lobster/projects/2#card-55341819) by Maggie and Ridhima
+   - A. The user must create an account with a username and passowrd to access the website. The user must also provide information such as age, gender, email, and favorites (see next bullet). If the user has already created an account, they can use the "Sign In" option and input their username and password. The login page frontend uses CSS to match with the theme colors, font, and layout of the museum webpage.
+   - B. Code link: see [login.html](templates/login.html) and [landing_page.html](templates/landing_page.html)
+   - C. Runtime link: http://lobstersmuseum.cf/login OR http://104.63.255.249:8081/
+ - [Favorites Page](https://github.com/crystalwidjaja/lobster/projects/2#card-51242483) by Crystal and Maggie
+   - A. The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
+   - B. Code link: see [favorites.html](templates/favorites.html) and [landing_page.html](templates/landing_page.html)
+   - C. Runtime link: http://104.63.255.249:8081/favorites
+ - [Search Bar](https://github.com/crystalwidjaja/lobster/projects/2#card-51316886) by Maggie and Crystal
+   - A. The search bar feature in the top right corner of the nav bar allows users to find information from anywhere on the website.
+   - B. Code link: see [searchresults.html](searchresults.html)
+   - C. Runtime link: http://lobstersmuseum.cf/home
+ - [About Us Page](https://github.com/crystalwidjaja/lobster/projects/2#card-52328560) by Crystal
+   - A The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
+   - B. Code link: see [about.py](about.py) and [about_us.html](templates/about_us.html)
+   - C. Runtime link: http://104.63.255.249:8081/about_us
+
+- COLLEGE BOARD REQUIREMENTS
+  - INPUTS: Our project has inputs, specifically for the making of a user account. There is a form for new users and a form for returning users. These involve “GET” and “POST.” The type of input we are using is a html form for the user to input their information. We also use checkboxes for choosing favorites and a dropdown menu to specific gender. Evidence in [landing_page.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/landing_page.html#L114-#L155) and [login.html](https://github.com/crystalwidjaja/lobster/blob/main/templates/login.html#L90-#L100)
+  - LISTS: One way we use lists is through extracting the data from a source through a REST API. Evidence in [botany.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/botany.py#L25-#L52)
+  - PROCEDURES: We are using these procedures mainly through our main.py which contains most of the routes to our websites. Evidence in [main.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/main.py#L122-#L211)
+  - ALGORITHMS: We use algorithms to create user accounts and sessions. Additionally, the algorithms are used to direct the user throughout the pages via conditional statements. Evidence in [main.py](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/main.py#L78-#L118)
+  - OUTPUTS: Our Favorites page creates a customized page of exhibits based on the user input. For example, if the user chooses the art and planetarium exhibits when they make an account, their Favorites page will display these 2 exhibits. Evidence in [favorites.html](https://github.com/crystalwidjaja/lobster/blob/ca0465e152014101665ebd9d518ad86ec8d514f6/templates/favorites.html#L107-#L139)
+
 # Completed Tickets/Goals for Team (Week 2/15/2021)
 ### CODE REVIEW IS INCORPORATED IN THE FOLLOWING TICKET OVERVIEWS
  - [Planetarium 3D Panorama (Frontend)](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya

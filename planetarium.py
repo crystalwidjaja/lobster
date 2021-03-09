@@ -6,6 +6,7 @@ response=requests.get(url)
 responseJsonObj = response.json()
 dataList = responseJsonObj.get('bodies')
 
+#def planetdata
 recordedList1 = []
 for data in dataList:
     name = data['name']
