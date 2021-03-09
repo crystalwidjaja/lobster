@@ -120,7 +120,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
    - B. Code link: see [about.py](about.py) and [about_us.html](templates/about_us.html)
      - The about us page utilizes CSS and dictionaries for each of the different components as seen here
-                ```
+        ````
                {% for about in aboutus: %}
                {% set name = about["name"] %}
                {% set image = about["image"] %}
