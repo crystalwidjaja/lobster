@@ -31,6 +31,22 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - [Music Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148483) by Crystal
    - A. The music exhibit is split into different eras with a symbol for each decade (jukebox, phonograph, radio, etc). The images will be buttons that can play various decade themed playlists. The code will primarily use HTML and CSS.
    - B. Code link: see [song.csv](song.csv), [song.py](song.py), [music.css](templates/music.css), and [music.html](templates/music.html)
+     -The page utilizes variables and functions to properly play the music
+            ```
+                 var music
+                 var isPlaying = false
+            
+            function playMusic(){
+            if(isPlaying == false){
+            
+            music = new Audio('/static/1920s.mp3');
+            music.play();
+            isPlaying = true
+            } else{
+            isPlaying = false
+            music.pause()
+            }
+            }
    - C. Runtime link: http://lobstersmuseum.cf/music
 - [Art Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-53148527) by Sriya and Ridhima
    - A. The Art Exhibit displays art from various different time periods. The user can view these images by scrolling sideways, a feature that mimics walking in a museum. Also, the user can hover over the art images to learn more information. This code primarily uses backend python. 
