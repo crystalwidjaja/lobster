@@ -111,10 +111,58 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - [Favorites Page](https://github.com/crystalwidjaja/lobster/projects/2#card-51242483) by Crystal and Maggie
    - A. The user is able to select a few exhibits that may interest them. When they first create an account on the website, they can choose from Botany, History, Photography, Music, and Space. The topics they choose will appear in the "My Favorites" page when the user logs in to the website.
    - B. Code link: see [favorites.html](templates/favorites.html) and [landing_page.html](templates/landing_page.html)
+   	- Maggie's Frontend:
+   	   - From the Sign in Page, I was able to add on to the form by adding checkboxes for the favorites. Next, I added exhibits to the database table and ensured it would save as a null value.
+		```
+			botany = db.Column(db.Integer, unique=False, nullable=True)
+			photography = db.Column(db.Integer, unique=False, nullable=True)
+			music = db.Column(db.Integer, unique=False, nullable=True)
+			space = db.Column(db.Integer, unique=False, nullable=True)
+		```
+
+	    - Then I added code beneath the app route for the favorites page to pass the data to the favorites.html page.
+	```
+		@app.route('/favorites')
+		def favorites():
+	  	  # function use Flask import (Jinja) to render an HTML template
+	    	selected_user = None
+	    	selected_fav = None
+	    	if g.user:
+			selected_user = session['user']
+			selected_fav = User.query.filter_by(username=selected_user).first()
+			return render_template("favorites.html", user=session['user'], selected_fav=selected_fav)
+	    	return redirect(url_for('landing_page'))
+	```
+	
+	  - Finally I used jinja "if" statements to display that exhibit if it was chosen by that specific user or not. Here is an example for botany:
+```
+	{% if selected_fav.botany == 'botany' %}
+        {% endif %}
+```
    - C. Runtime link: http://104.63.255.249:8081/favorites
  - [Search Bar](https://github.com/crystalwidjaja/lobster/projects/2#card-51316886) by Maggie and Crystal
    - A. The search bar feature in the top right corner of the nav bar allows users to find information from anywhere on the website.
    - B. Code link: see [searchresults.html](searchresults.html)
+   	- When you type into the search bar, it will search the database for the exhibit and it will return a link to that exhibit.
+   	
+	```
+	search = Search(exhibit="botany", link="/botany")
+	search1 = Search(exhibit="my favorites", link="/favorites")
+	search2 = Search(exhibit="all galleries", link="/all_galleries")
+	search3 = Search(exhibit="music", link="/music")
+	search4 = Search(exhibit="art", link="/photography")
+	search5 = Search(exhibit="photography", link="/photography")
+	search6 = Search(exhibit="about us", link="/about_us")
+	db.session.add(search)
+	db.session.add(search1)
+	db.session.add(search2)
+	db.session.add(search3)
+	db.session.add(search4)
+	db.session.add(search5)
+	db.session.add(search6)
+	db.session.commit()
+	```
+	
    - C. Runtime link: http://lobstersmuseum.cf/home
  - [About Us Page](https://github.com/crystalwidjaja/lobster/projects/2#card-52328560) by Crystal
    - A The user can learn about the creators of the website through the About Us page. This page uses Python variables to list a picture of us, our name, birthday, star sign, and a fun fact.
