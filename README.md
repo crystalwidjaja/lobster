@@ -144,7 +144,7 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
    - A. The search bar feature in the top right corner of the nav bar allows users to find information from anywhere on the website.
    - B. Code link: see [searchresults.html](searchresults.html)
    	- When you type into the search bar, it will search the database for the exhibit and it will return a link to that exhibit.
-   	
+   	- Maggie's Backend:
 	```
 	search = Search(exhibit="botany", link="/botany")
 	search1 = Search(exhibit="my favorites", link="/favorites")
