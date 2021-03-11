@@ -8,6 +8,11 @@ IMPORTANT: TO ACCESS THE WEBSITE YOU MUST BE SIGNED IN. Click "Already have an a
  - Username: test
  - Password: test
 
+## To Access Website:
+1. Go to http://lobstersmuseum.cf/
+2. Click "Already have an account? Sign In" and sign in using Username "test" and Password "test".
+3. Explore!
+
 # Finals Week (Technicals Overview)
  - [Planetarium Exhibit](https://github.com/crystalwidjaja/lobster/projects/2#card-55321632) by Sriya and Maggie
    - A. The planetarium exhibit includes a panorama of the solar system. It will also have [“infospots” (located on top of each Jupiter, for example)](https://github.com/crystalwidjaja/lobster/blob/main/templates/planetarium.html#L155-#L166) that the user can click on. Clicking on “info spots” will show information about each of the planets.
