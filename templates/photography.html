@@ -195,19 +195,19 @@
 
 <h1>Art Exhibit</h1>
 
-<form action="/action_page.php">
+<form action="/photography">
     <p>Filter by culture:</p>
-    <input type="radio" id="american" name="culture" value="american">
+    <input type="radio" id="american" name="culture" value="America">
     <label for="american">American</label><br>
-    <input type="radio" id="dutch" name="culture" value="dutch">
+    <input type="radio" id="dutch" name="culture" value="Netherlands">
     <label for="dutch">Dutch</label><br>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other">Other</label>
+    <input type="radio" id="france" name="culture" value="France">
+    <label for="france">France</label>
     <br><br>
     <input type="submit" value="Submit">
 </form>
 
-<div_output>This text is the content of the box.</div_output>
+<div_output>{{artPiece.get_filtered_titles}}</div_output>
 
 <div class="box-3"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/mme-l-laure-borreau-1863-gustave-courbet.jpg" alt="Mme L...Laure Borreau" style="width:200px;height:250px;">
     <div class="image-description hover-box">

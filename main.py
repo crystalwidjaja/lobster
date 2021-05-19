@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, request, session, redirect, url_for, g
 import os
 from about import about
+from artpiece import ArtPiece
 
 ''' database setup  '''
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -170,11 +171,14 @@ def music():
     return redirect(url_for('landing_page'))
 
 
-@app.route('/photography')
+@app.route('/photography', methods=["GET", "POST"])
 def photography():
     # function use Flask import (Jinja) to render an HTML template
     if g.user:
         return render_template("photography.html", user=session['user'])
+    if 'submit' in request.form:
+        return render_template("photography.html", artPiece=ArtPiece(request.form['culture']))
+
     return redirect(url_for('landing_page'))
 
 
